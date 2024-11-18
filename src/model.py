@@ -17,7 +17,7 @@ class llm(ABC):
         self.tokenizer: PreTrainedTokenizer = AutoTokenizer.from_pretrained(library_name)
         self.model:     PreTrainedModel     = AutoModelForCausalLM.from_pretrained(library_name, device_map="auto") 
 
-    def infer(self, prompt: str, **kwargs) -> str:
+    def infer(self, prompt: str, **hyperparameters) -> str:
         """ Run infernce on model from a natural language prompt """
         inputs   = self.tokenizer(
             prompt, 
@@ -26,7 +26,8 @@ class llm(ABC):
 
         outputs  = self.model.generate(
             inputs.input_ids, 
-            kwargs=kwargs 
+            eos_token_id=self.tokenizer.convert_tokens_to_ids(';'),
+            kwargs=hyperparameters,
         )
 
         response: str = self.tokenizer.decode(outputs[0], skip_special_tokens=True)

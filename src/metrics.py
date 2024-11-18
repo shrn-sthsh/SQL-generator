@@ -56,41 +56,41 @@ def determine_accuracy(
     accuracy: float = correct_count / len(generated_and_expected_queries)
     return accuracy
 
-def BLEU_metric(generated_and_expected_queries: list[tuple[str, str]]) -> float:
+def BLEU(predictions_and_expected_queries: list[tuple[str, str]]) -> float:
     bleu_scores: list[Any] = []
 
-    for generated_query, expected_query in generated_and_expected_queries:
+    for generated_query, expected_query in predictions_and_expected_queries:
         score = sentence_bleu([expected_query.split()], generated_query.split())
         bleu_scores.append(score)
 
     return sum(bleu_scores) / len(bleu_scores)
 
-def ROUGE_metric(generated_and_expected_queries: list[tuple[str, str]]) -> Any:
+def ROUGE(predicted_and_expected_queries: list[tuple[str, str]]) -> Any:
     rouge: Rouge = Rouge()
-    generated_queries, expected_queries = zip(*generated_and_expected_queries)
+    generated_queries, expected_queries = zip(*predicted_and_expected_queries)
 
     scores = rouge.get_scores(generated_queries, expected_queries, avg=True)
     return scores
 
-def METEOR_metric(generated_and_expected_queries: list[tuple[str, str]]) -> float:
+def METEOR(predicted_and_expected_queries: list[tuple[str, str]]) -> float:
     meteor_scores = []
 
-    for generated_query, expected_query in generated_and_expected_queries:
+    for generated_query, expected_query in predicted_and_expected_queries:
         score = meteor_score([generated_query], expected_query)
         meteor_scores.append(score)
 
     return sum(meteor_scores) / len(meteor_scores)
 
-def BERTScore_metric(generated_and_expected_queries: list[tuple[str, str]]) -> tuple[Any, Any, Any]:
-    generated_queries, expected_queries = zip(*generated_and_expected_queries)
+def BERTScore(predicted_and_expected_queries: list[tuple[str, str]]) -> tuple[Any, Any, Any]:
+    generated_queries, expected_queries = zip(*predicted_and_expected_queries)
 
     P, R, F1 = score(generated_queries, expected_queries, lang="en", verbose=False)
     return (P, R, F1)
 
 
-def SemScore_metric(generated_and_expected_queries: list[tuple[str, str]]) -> float:
+def SemScore(predicted_and_expected_queries: list[tuple[str, str]]) -> float:
     model: SentenceTransformer = SentenceTransformer('all-MiniLM-L6-v2')
-    generated_queries, expected_queries = zip(*generated_and_expected_queries)
+    generated_queries, expected_queries = zip(*predicted_and_expected_queries)
 
     generated_embeddings = model.encode(generated_queries, convert_to_tensor=True)
     expected_embeddings = model.encode(expected_queries, convert_to_tensor=True)

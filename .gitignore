@@ -1,2 +1,5 @@
 # cache
 *__pycache__*
+
+# LSP config
+pyrightconfig.json
