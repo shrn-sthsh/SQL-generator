@@ -5,4 +5,4 @@ class falcon_llm(llm):
         super().__init__(library_name)
        
     def infer(self, prompt: str, **hyperparameters) -> str:
-        return super().infer(prompt, hyperparameters=hyperparameters) 
+        return super().infer(prompt, **hyperparameters) 

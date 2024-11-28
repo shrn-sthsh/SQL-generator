@@ -1,13 +1,13 @@
 from difflib import SequenceMatcher
 from typing_extensions import Any
 
-import test
-
 from nltk.translate.bleu_score import sentence_bleu
-from rouge import Rouge 
+from rouge_score import rouge_scorer
 from nltk.translate.meteor_score import meteor_score
+from nltk.tokenize import word_tokenize
 from bert_score import score
 from sentence_transformers import SentenceTransformer, util
+
 
 def calculate_sql_similarity(
     generated_sql: str, 
@@ -26,7 +26,6 @@ def calculate_sql_similarity(
 
     return SequenceMatcher(None, generated_sql, expected_sql).ratio()
 
-
 def determine_accuracy(
     generated_and_expected_queries: list[tuple[str, str]], 
     threshold:                      float = 0.9
@@ -44,8 +43,7 @@ def determine_accuracy(
     """
 
     if not generated_and_expected_queries:
-        test.logging.warning("Empty results array")
-        return -1.0
+        return float("nan")
     
     correct_count: int = 0
     for generated_query, expected_query in generated_and_expected_queries:
@@ -56,49 +54,98 @@ def determine_accuracy(
     accuracy: float = correct_count / len(generated_and_expected_queries)
     return accuracy
 
-def BLEU(predictions_and_expected_queries: list[tuple[str, str]]) -> float:
-    bleu_scores: list[Any] = []
+def BLEU(predicted_and_expected_queries: list[tuple[str, str]]) -> float:
+    if not predicted_and_expected_queries:
+        return float("nan")
 
-    for generated_query, expected_query in predictions_and_expected_queries:
+    bleu_scores: list[Any] = []
+    for generated_query, expected_query in predicted_and_expected_queries:
         score = sentence_bleu([expected_query.split()], generated_query.split())
         bleu_scores.append(score)
 
     return sum(bleu_scores) / len(bleu_scores)
 
-def ROUGE(predicted_and_expected_queries: list[tuple[str, str]]) -> Any:
-    rouge: Rouge = Rouge()
-    generated_queries, expected_queries = zip(*predicted_and_expected_queries)
 
-    scores = rouge.get_scores(generated_queries, expected_queries, avg=True)
-    return scores
+def ROUGE(predicted_and_expected_queries: list[tuple[str, str]]) -> dict[str, dict[str, float]]:
+    if not predicted_and_expected_queries:
+        return {
+            "rouge1": {"precision": float("nan"), "recall": float("nan"), "fmeasure": float("nan")},
+            "rouge2": {"precision": float("nan"), "recall": float("nan"), "fmeasure": float("nan")},
+            "rougeL": {"precision": float("nan"), "recall": float("nan"), "fmeasure": float("nan")},
+        }
+
+    scorer: rouge_scorer.RougeScorer = rouge_scorer.RougeScorer(
+        ["rouge1", "rouge2", "rougeL"], 
+        use_stemmer=True
+    )
+    totals: dict[str, dict[str, float]] = {
+        "rouge1": {"precision": 0.0, "recall": 0.0, "fmeasure": 0.0},
+        "rouge2": {"precision": 0.0, "recall": 0.0, "fmeasure": 0.0},
+        "rougeL": {"precision": 0.0, "recall": 0.0, "fmeasure": 0.0},
+    }
+
+    # Compute scores for each pair
+    for generated, expected in predicted_and_expected_queries:
+        scores = scorer.score(expected, generated)
+
+        for metric in totals:
+            totals[metric]["precision"] += scores[metric].precision
+            totals[metric]["recall"]    += scores[metric].recall
+            totals[metric]["fmeasure"]  += scores[metric].fmeasure
+
+    # Average the scores
+    scores: dict[str, dict[str, float]] = {
+        metric: {
+            key: value / len(predicted_and_expected_queries)
+            for key, value in totals[metric].items()
+        }
+
+        for metric in totals
+    }
+
+    return scores 
+
 
 def METEOR(predicted_and_expected_queries: list[tuple[str, str]]) -> float:
-    meteor_scores = []
+    if not predicted_and_expected_queries:
+        return float("nan")
 
+    scores: list[float] = []
     for generated_query, expected_query in predicted_and_expected_queries:
-        score = meteor_score([generated_query], expected_query)
-        meteor_scores.append(score)
+        generated_tokens: list[str] = word_tokenize(generated_query)
+        expected_tokens:  list[str] = word_tokenize(expected_query)
 
-    return sum(meteor_scores) / len(meteor_scores)
+        score: float = meteor_score([expected_tokens], generated_tokens)
+        scores.append(score)
 
-def BERTScore(predicted_and_expected_queries: list[tuple[str, str]]) -> tuple[Any, Any, Any]:
+    return sum(scores) / len(scores)
+
+
+def BERTScore(predicted_and_expected_queries: list[tuple[str, str]]) -> tuple[float, float, float]:
+    if not predicted_and_expected_queries:
+        return (float("nan"), float("nan"), float("nan"))
+
     generated_queries, expected_queries = zip(*predicted_and_expected_queries)
-
     P, R, F1 = score(generated_queries, expected_queries, lang="en", verbose=False)
-    return (P, R, F1)
+    P, R, F1 = P.tolist(), R.tolist(), F1.tolist()
+
+    return (sum(P) / len(P), sum(R) / len(R), sum(F1) / len(F1))
 
 
 def SemScore(predicted_and_expected_queries: list[tuple[str, str]]) -> float:
+    if not predicted_and_expected_queries:
+        return float("nan")
+
     model: SentenceTransformer = SentenceTransformer('all-MiniLM-L6-v2')
     generated_queries, expected_queries = zip(*predicted_and_expected_queries)
 
     generated_embeddings = model.encode(generated_queries, convert_to_tensor=True)
     expected_embeddings = model.encode(expected_queries, convert_to_tensor=True)
 
-    similarity_scores = [
-        util.cos_sim(generated_embedding, expected_embedding).item() 
-        for generated_embedding, expected_embedding 
+    scores: list[float] = [
+        util.cos_sim(generated_embedding, expected_embedding).item()
+        for generated_embedding, expected_embedding
         in zip(generated_embeddings, expected_embeddings)
     ]
 
-    return sum(similarity_scores) / len(similarity_scores)
+    return sum(scores) / len(scores)

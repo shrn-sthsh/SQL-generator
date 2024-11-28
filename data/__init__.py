@@ -3,9 +3,12 @@ import logging
 
 logging.basicConfig(
     format="%(levelname)s: %(message)s",
-    level=logging.DEBUG
+    level=logging.INFO
 )
 
+from functools import lru_cache
+
+@lru_cache(maxsize=1)
 def project_data_path() -> str:
     curr: str = os.path.dirname(os.path.abspath(__file__))
 

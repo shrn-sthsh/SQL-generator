@@ -6,10 +6,9 @@ import test
 
 import os
 import time
-import torch
 import progressbar
 
-from typing_extensions import Iterable
+from typing_extensions import Iterable, Any
 
 
 def llm_sql_test(
@@ -37,20 +36,15 @@ def llm_sql_test(
     # Set hyperparameters
     if not hyperparameters:
         hyperparameters = {
-            "max_length" : 60,          # Adjust for length of SQL statements
+            "max_length" : 10000,       # Adjust for length of SQL statements
             "min_length" : 10,          # Minimum length to avoid incomplete output
-            "temperature" : 0.2,        # Low randomness for more deterministic output
-            "top_k" : 40,               # Limit token choices to the top 40 tokens
-            "top_p" : 0.85,             # Top-p sampling for concise, higher-probability tokens
-            "repetition_penalty" : 1.3, # Discourages repetitive structures
-            "no_repeat_ngram_size" : 2
         }
 
 
     # Set up saves for iterations
-    dataset: list[tuple[str, str, str]] = parse.load_dataset(data_path)
-    generated_and_expected_queries: list[tuple[str, str]] = []
-    runtimes: list[float] = []
+    dataset:                        list[tuple[str, str, str]] = parse.load_dataset(data_path)
+    runtimes:                       list[float]                = []
+    generated_and_expected_queries: list[tuple[str, str]]      = []
 
     # Generate outputs for prompts
     test.logging.info("RUNNING TEST CASES")
@@ -72,7 +66,7 @@ def llm_sql_test(
             runtime: float = time.perf_counter()
             output:  str   = model.infer(
                 prompt, 
-                hyperparameters=hyperparameters
+                **hyperparameters
             )
             runtimes.append(time.perf_counter() - runtime)
 
@@ -90,18 +84,65 @@ def llm_sql_test(
     with open(result_path, 'w+') as result_file:
 
         # Test metadata
-        dataset_name:      str   = os.path.splitext(os.path.basename(data_path))[0]
-        number_of_queries: int   = len(generated_and_expected_queries)
+        dataset_name:      str = os.path.splitext(os.path.basename(data_path))[0]
+        number_of_queries: int = len(generated_and_expected_queries)
         hardware_details:  str = ""
+
+        import torch
         if torch.cuda.is_available():
             hardware_details: str = torch.cuda.get_device_name() + ":" + str(torch.cuda.device_count())
 
+
         # Test scores
-        BLEU_metric:       float    = metrics.BLEU(generated_and_expected_queries)
-        ROUGE_metric:      float    = metrics.ROUGE(generated_and_expected_queries)
-        METEOR_metric:     float    = metrics.METEOR(generated_and_expected_queries)
-        BERTScore_metrics: Iterable = metrics.BERTScore(generated_and_expected_queries) 
-        SemScore_metric:   float    = metrics.SemScore(generated_and_expected_queries)
+        try:
+            BLEU_metric: float = metrics.BLEU(generated_and_expected_queries)
+        except Exception as exception:
+            test.logging.warning(
+                f"Exception thrown in BLEU score calculation: {exception}", 
+                exc_info=True
+            )
+            BLEU_metric: float = float("nan")
+
+        try:
+            ROUGE_metrics: dict[str, dict[str, float]] = metrics.ROUGE(generated_and_expected_queries)
+        except Exception as exception:
+            test.logging.warning(
+                f"Exception thrown in ROUGE score calculation: {exception}", 
+                exc_info=True
+            )
+            ROUGE_metrics: dict[str, dict[str, float]] = {
+                "rouge1": {"precision": float("nan"), "recall": float("nan"), "fmeasure": float("nan")},
+                "rouge2": {"precision": float("nan"), "recall": float("nan"), "fmeasure": float("nan")},
+                "rougeL": {"precision": float("nan"), "recall": float("nan"), "fmeasure": float("nan")},
+            }
+
+        try:
+            METEOR_metric: float = metrics.METEOR(generated_and_expected_queries)
+        except Exception as exception:
+            test.logging.warning(
+                f"Exception thrown in METEOR score calculation: {exception}", 
+                exc_info=True
+            )
+            METEOR_metric: float = float('nan')
+
+        try:
+            BERTScore_metrics: Iterable = metrics.BERTScore(generated_and_expected_queries) 
+        except Exception as exception:
+            test.logging.warning(
+                f"Exception thrown in BERT score calculation: {exception}", 
+                exc_info=True
+            )
+            BERTScore_metrics: tuple[float, float, float] = (float('nan'), float('nan'), float('nan'))
+
+        try:
+            SemScore_metric: tuple[Any, Any, Any] = metrics.SemScore(generated_and_expected_queries)
+        except Exception as exception:
+            test.logging.warning(
+                f"Exception thrown in SemScore calculation: {exception}", 
+                exc_info=True
+            )
+            SemScore_metric: float = float('nan')
+
 
         # Test results
         result_file.write(
@@ -113,9 +154,19 @@ def llm_sql_test(
                 
                 "\nACCURACY\n"
                 f"BLEU:      {BLEU_metric}\n"
-                f"ROUGE:     {ROUGE_metric}\n"
+
+                f"ROUGE:\n"
+                f"\t- rouge-1:   {ROUGE_metrics['rouge1']}\n"
+                f"\t- rouge-2:   {ROUGE_metrics['rouge2']}\n"
+                f"\t- rouge-L:   {ROUGE_metrics['rougeL']}\n"
+
                 f"METEOR:    {METEOR_metric}\n"
-                f"BERTScore: {BERTScore_metrics}\n"
+
+                f"BERTScore:\n"
+                f"\t- precision: {BERTScore_metrics[0]}\n"
+                f"\t- recall:    {BERTScore_metrics[1]}\n"
+                f"\t- F1-score:  {BERTScore_metrics[2]}\n"
+
                 f"SemScore:  {SemScore_metric}\n"
 
                 "\nLATENCY\n"

@@ -1,7 +1,6 @@
 from abc import ABC
 
 from transformers import AutoTokenizer, AutoModelForCausalLM, PreTrainedTokenizer, PreTrainedModel
-from torch import LongTensor
 
 class llm(ABC):
     def __init__(self, library_name: str):
@@ -15,19 +14,22 @@ class llm(ABC):
             self.name:   str = library_name
 
         self.tokenizer: PreTrainedTokenizer = AutoTokenizer.from_pretrained(library_name)
-        self.model:     PreTrainedModel     = AutoModelForCausalLM.from_pretrained(library_name, device_map="auto") 
+        self.model:     PreTrainedModel     = AutoModelForCausalLM.from_pretrained(
+                                                    library_name, 
+                                                    device_map="auto"
+                                                )
 
     def infer(self, prompt: str, **hyperparameters) -> str:
         """ Run infernce on model from a natural language prompt """
-        inputs   = self.tokenizer(
+        inputs = self.tokenizer(
             prompt, 
             return_tensors="pt"
-        ).to("cuda")
+        ).to(self.model.device)
 
-        outputs  = self.model.generate(
+        outputs = self.model.generate(
             inputs.input_ids, 
-            eos_token_id=self.tokenizer.convert_tokens_to_ids(';'),
-            kwargs=hyperparameters,
+            # eos_token_id=self.tokenizer.eos_token_id
+            **hyperparameters
         )
 
         response: str = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
