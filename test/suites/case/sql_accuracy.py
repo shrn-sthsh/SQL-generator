@@ -36,8 +36,8 @@ def llm_sql_test(
     # Set hyperparameters
     if not hyperparameters:
         hyperparameters = {
-            "max_length" : 10000,       # Adjust for length of SQL statements
-            "min_length" : 10,          # Minimum length to avoid incomplete output
+            "max_length" : 2048,  # Adjust for length of SQL statements
+            "min_length" : 10,    # Minimum length to avoid incomplete output
         }
 
 
@@ -48,6 +48,15 @@ def llm_sql_test(
 
     # Generate outputs for prompts
     test.logging.info("RUNNING TEST CASES")
+
+    test.logging.info(f"TEST MODEL: {model.name.upper()}")
+    dataset_name: str = data_path
+    if '/' in dataset_name:
+        parts: list[str] = dataset_name.split('/')
+        if parts:
+            dataset_name = parts[-1]
+    test.logging.info(f"TEST DATASET: {dataset_name.upper()}")
+    
     bar: progressbar.ProgressBar = progressbar.ProgressBar(maxval=len(dataset)).start()
     with open(output_path, 'w+') as output_file:
         for index, data in enumerate(dataset):
@@ -148,7 +157,7 @@ def llm_sql_test(
         result_file.write(
             (
                 f"MODEL:    {model.name}\n"
-                f"GPU:      {hardware_details}"
+                f"GPU:      {hardware_details}\n"
                 f"DATASET:  {dataset_name}\n"
                 f"QUERIES:  {number_of_queries}\n"
                 

@@ -1,0 +1,2340 @@
+PROMPT 1:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of mass shootings for each month in USA.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 1:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of mass shootings for each month in USA.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import psycopg2
+import pandas as pd
+
+# connect to the database
+conn = psycopg2.connect(
+    host = "localhost",
+    database = "postgres",
+    user = "postgres",
+    password = "postgres"
+)
+
+# create a cursor
+cur = conn.cursor()
+
+# create a query
+query = "SELECT COUNT(IncidentID) FROM us_shootings WHERE State = 'USA' AND CityOrCountry = 'United States'"
+
+# execute the query
+cur.execute(query)
+
+# get the results
+results = cur.fetchall()
+
+# print the results
+print(results)
+
+# close the cursor
+cur.close()
+
+# close the connection
+conn.close()
+
+====================================================================================================
+
+PROMPT 2:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get total suspects arrested per million capita
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 2:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get total suspects arrested per million capita
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import psycopg2
+
+# connect to the database
+conn = psycopg2.connect(
+	host = "localhost",
+	database = "postgres",
+	user = "postgres",
+	password = "postgres"
+)
+
+# create a cursor
+cur = conn.cursor()
+
+# create a query
+query = """
+	SELECT
+		CensurYear,
+		State,
+		ROUND(PopulationCount/1000000, 2) AS PopulationCount
+	FROM
+		us_population
+	GROUP BY
+		CensurYear,
+		State
+	ORDER BY
+		CensurYear,
+		State;
+"""
+
+# execute the query
+cur.execute(query)
+
+# get the results
+results = cur.fetchall()
+
+# print the results
+for result in results:
+	print(result)
+
+# close the cursor
+cur.close()
+
+# close the connection
+conn.close()
+
+
+====================================================================================================
+
+PROMPT 3:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 3:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import pandas as pd
+
+# get the data
+df = pd.read_csv('homelessness.csv')
+
+# get the year
+year = df['CALENDAR_YEAR'].tolist()[0]
+
+# get the location
+location = df['LOCATION'].tolist()[0]
+
+# get the age group
+age_group = df['AGE_GROUP_PUBLIC'].tolist()[0]
+
+# get the homeless count
+homeless_count = df['EXPERIENCING_HOMELESSNESS_CNT'].tolist()[0]
+
+# get the shooting count
+shooting_count = df['SHOOTING_CNT'].tolist()[0]
+
+# get the question
+question = "Get count of homeless population and US shooting incidents for each year."
+
+# get the answer
+answer = "SELECT * FROM experiencing_homelessness_age_demographics WHERE CALENDAR_YEAR = " + year + " AND LOCATION = '" + location + "' AND AGE_GROUP_PUBLIC = '" + age_group + "'"
+
+# print the answer
+print(answer)
+
+
+====================================================================================================
+
+PROMPT 4:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita for each county of California.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 4:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita for each county of California.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import psycopg2
+import pandas as pd
+
+# connect to database
+conn = psycopg2.connect(
+	host = "localhost",
+	database = "homelessness_db",
+	user = "postgres",
+	password = "postgres"
+)
+
+# create cursor
+cur = conn.cursor()
+
+# create query
+cur.execute(
+	"""
+	SELECT
+		EXPERIENCING_HOMELESSNESS_CNT,
+		LOCATION,
+		CALENDAR_YEAR
+	FROM
+		experiencing_homelessness_age_demographics
+	WHERE
+		CALENDAR_YEAR = 2020
+	AND
+		EXPERIENCING_HOMELESSNESS_CNT > 0
+	ORDER BY
+		EXPERIENCING_HOMELESSNESS_CNT DESC
+	LIMIT 1
+	"""
+)
+
+# fetch data
+data = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# create dataframe
+df = pd.DataFrame(data)
+
+# print dataframe
+print(df)
+
+# create query
+cur.execute(
+	"""
+	SELECT
+		COUNT(*)
+	FROM
+		us_population_county
+	WHERE
+		COUNTY = 'Los Angeles'
+	"""
+)
+
+# fetch data
+data = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# create dataframe
+df = pd.DataFrame(data)
+
+# print dataframe
+print(df)
+
+# create query
+cur.execute(
+	"""
+	SELECT
+		COUNT(*)
+	FROM
+		us_population_county
+	WHERE
+		COUNTY = 'Los Angeles'
+	"""
+)
+
+# fetch data
+data = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# create dataframe
+df = pd.DataFrame(data)
+
+# print dataframe
+print(df)
+
+# create query
+cur.execute(
+	"""
+	SELECT
+		COUNT(*)
+	FROM
+		us_population_county
+	WHERE
+		COUNTY = 'Los Angeles'
+	"""
+)
+
+# fetch data
+data = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# create dataframe
+df = pd.DataFrame(data)
+
+# print dataframe
+print(df)
+
+# create query
+cur.execute(
+	"""
+	SELECT
+		COUNT(*)
+	FROM
+		us_population_county
+	WHERE
+		COUNTY = 'Los Angeles'
+	"""
+)
+
+# fetch data
+data = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# create dataframe
+df = pd.DataFrame(data)
+
+# print dataframe
+print(df)
+
+# create query
+cur.execute(
+	"""
+	SELECT
+		COUNT(*)
+	FROM
+		us_population_county
+	WHERE
+		COUNTY = 'Los Angeles'
+	"""
+)
+
+# fetch data
+data = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# create dataframe
+df = pd.DataFrame(data)
+
+# print dataframe
+print(df)
+
+# create query
+cur.execute(
+	"""
+	SELECT
+		COUNT(*)
+	FROM
+		us_population_county
+	WHERE
+		COUNTY = 'Los Angeles'
+	"""
+)
+
+# fetch data
+data = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# create dataframe
+df = pd.DataFrame(data)
+
+# print dataframe
+print(df)
+
+# create query
+cur.execute(
+	"""
+	SELECT
+		COUNT(*)
+	FROM
+		us_population_county
+	WHERE
+		COUNTY = 'Los Angeles'
+	"""
+)
+
+# fetch data
+data = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# create dataframe
+df = pd.DataFrame(data)
+
+# print dataframe
+print(df)
+
+# create query
+cur.execute(
+	"""
+	SELECT
+		COUNT(*)
+	FROM
+		us_population_county
+	WHERE
+		COUNTY = 'Los Angeles'
+	"""
+)
+
+# fetch data
+data = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# create dataframe
+df = pd.DataFrame(data)
+
+# print dataframe
+print(df)
+
+# create query
+cur.execute(
+	"""
+	SELECT
+		COUNT(*)
+	FROM
+		us_population_county
+	WHERE
+		COUNTY = 'Los Angeles'
+	"""
+)
+
+# fetch data
+data = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# create dataframe
+df = pd.DataFrame(data)
+
+# print dataframe
+print(df)
+
+# create query
+cur.execute(
+	"""
+	SELECT
+		COUNT(*)
+	FROM
+		us_population_county
+	WHERE
+		COUNTY = 'Los Angeles'
+	"""
+)
+
+# fetch data
+data = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# create dataframe
+df = pd.DataFrame(data)
+
+# print dataframe
+print(df)
+
+# create query
+cur.execute(
+	"""
+	SELECT
+		COUNT(*)
+	FROM
+		us_population_county
+	WHERE
+		COUNTY = 'Los Angeles'
+	"""
+)
+
+# fetch data
+data = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# create dataframe
+df = pd.DataFrame(data)
+
+# print dataframe
+print(df)
+
+# create query
+cur.execute(
+	"""
+	SELECT
+		COUNT(*)
+	FROM
+		us_population_county
+	WHERE
+		COUNTY = 'Los Angeles'
+	"""
+)
+
+# fetch data
+data = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# create dataframe
+df = pd.DataFrame(data)
+
+# print dataframe
+print(df)
+
+# create query
+cur.execute(
+	"""
+	SELECT
+		COUNT(*)
+	FROM
+		us_population_county
+	WHERE
+		COUNTY = 'Los Angeles'
+	"""
+)
+
+# fetch data
+data = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# create dataframe
+df = pd.DataFrame(data)
+
+# print dataframe
+print(df)
+
+# create query
+cur.execute(
+	"""
+	SELECT
+		COUNT(*)
+	FROM
+		us_population_county
+	WHERE
+		COUNTY = 'Los Angeles'
+	"""
+)
+
+# fetch data
+data = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# create dataframe
+df = pd.DataFrame(data)
+
+# print dataframe
+print(df)
+
+# create query
+cur.execute(
+	"""
+	SELECT
+		COUNT(*)
+	FROM
+		us_population
+
+====================================================================================================
+
+PROMPT 5:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita and US shooting incidents per million capita for each county of California.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+us_population_county (PopulationCount, County)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 5:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita and US shooting incidents per million capita for each county of California.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+us_population_county (PopulationCount, County)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import psycopg2
+import pandas as pd
+
+# connect to database
+conn = psycopg2.connect(
+    host = "localhost",
+    database = "homelessness_db",
+    user = "postgres",
+    password = "postgres"
+)
+
+# create cursor
+cur = conn.cursor()
+
+# get data
+cur.execute("""
+	SELECT EXPERIENCING_HOMELESSNESS_CNT, LOCATION
+	FROM experiencing_homelessness_age_demographics
+	WHERE CALENDAR_YEAR = 2019
+	AND AGE_GROUP_PUBLIC = 'All Ages'
+	AND LOCATION = 'California'
+	ORDER BY EXPERIENCING_HOMELESSNESS_CNT DESC
+	LIMIT 1
+""")
+
+# get results
+results = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# print results
+print(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# print dataframe
+print(df)
+
+# get population
+cur.execute("""
+	SELECT PopulationCount
+	FROM us_population_county
+	WHERE County = 'Los Angeles'
+	LIMIT 1
+""")
+
+# get results
+results = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# print results
+print(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# print dataframe
+print(df)
+
+# get shootings
+cur.execute("""
+	SELECT IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested
+	FROM us_shootings
+	WHERE State = 'California'
+	LIMIT 1
+""")
+
+# get results
+results = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# print results
+print(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# print dataframe
+print(df)
+
+# get population
+cur.execute("""
+	SELECT PopulationCount
+	FROM us_population_county
+	WHERE County = 'Los Angeles'
+	LIMIT 1
+""")
+
+# get results
+results = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# print results
+print(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# print dataframe
+print(df)
+
+# get shootings
+cur.execute("""
+	SELECT IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested
+	FROM us_shootings
+	WHERE State = 'California'
+	LIMIT 1
+""")
+
+# get results
+results = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# print results
+print(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# print dataframe
+print(df)
+
+# get population
+cur.execute("""
+	SELECT PopulationCount
+	FROM us_population_county
+	WHERE County = 'Los Angeles'
+	LIMIT 1
+""")
+
+# get results
+results = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# print results
+print(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# print dataframe
+print(df)
+
+# get shootings
+cur.execute("""
+	SELECT IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested
+	FROM us_shootings
+	WHERE State = 'California'
+	LIMIT 1
+""")
+
+# get results
+results = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# print results
+print(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# print dataframe
+print(df)
+
+# get population
+cur.execute("""
+	SELECT PopulationCount
+	FROM us_population_county
+	WHERE County = 'Los Angeles'
+	LIMIT 1
+""")
+
+# get results
+results = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# print results
+print(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# print dataframe
+print(df)
+
+# get shootings
+cur.execute("""
+	SELECT IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested
+	FROM us_shootings
+	WHERE State = 'California'
+	LIMIT 1
+""")
+
+# get results
+results = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# print results
+print(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# print dataframe
+print(df)
+
+# get population
+cur.execute("""
+	SELECT PopulationCount
+	FROM us_population_county
+	WHERE County = 'Los Angeles'
+	LIMIT 1
+""")
+
+# get results
+results = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# print results
+print(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# print dataframe
+print(df)
+
+# get shootings
+cur.execute("""
+	SELECT IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested
+	FROM us_shootings
+	WHERE State = 'California'
+	LIMIT 1
+""")
+
+# get results
+results = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# print results
+print(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# print dataframe
+print(df)
+
+# get population
+cur.execute("""
+	SELECT PopulationCount
+	FROM us_population_county
+	WHERE County = 'Los Angeles'
+	LIMIT 1
+""")
+
+# get results
+results = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# print results
+print(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# print dataframe
+print(df)
+
+# get shootings
+cur.execute("""
+	SELECT IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested
+	FROM us_shootings
+	WHERE State = 'California'
+	LIMIT 1
+""")
+
+# get results
+results = cur.fetchall()
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+# print results
+print(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# print dataframe
+print(df)
+
+# get
+
+====================================================================================================
+
+PROMPT 6:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get shooting incidents per million capita, and income per million capita.
+
+Schema: 
+	food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+us_population_county (PopulationCount, County)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 6:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get shooting incidents per million capita, and income per million capita.
+
+Schema: 
+	food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+us_population_county (PopulationCount, County)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import psycopg2
+import pandas as pd
+
+# connect to database
+conn = psycopg2.connect(
+    host = "localhost",
+    database = "postgres",
+    user = "postgres",
+    password = "postgres"
+)
+
+# create cursor
+cur = conn.cursor()
+
+# create query
+query = """
+SELECT
+	CASE
+		WHEN TractLOWI = 0 AND TractKids = 0 AND TractSeniors = 0 AND TractWhite = 0 AND TractBlack = 0 AND TractAsian = 0 AND TractNHOPI = 0 AND TractAIAN = 0 AND TractOMultir = 0 AND TractHispanic = 0 AND TractHUNV = 0 AND TractSNAP = 0 THEN 'INSUFFICENT'
+		ELSE 'SUFFICIENT'
+	END
+	AS "Tracts_LowIncome_IncomePerCapita"
+FROM
+	us_shootings
+WHERE
+	IncidentID = '1'
+	AND TractLOWI = 0
+	AND TractKids = 0
+	AND TractSeniors = 0
+	AND TractWhite = 0
+	AND TractBlack = 0
+	AND TractAsian = 0
+	AND TractNHOPI = 0
+	AND TractAIAN = 0
+	AND TractOMultir = 0
+	AND TractHispanic = 0
+	AND TractHUNV = 0
+	AND TractSNAP = 0
+"""
+
+# execute query
+cur.execute(query)
+
+# get results
+results = cur.fetchall()
+
+# close connection
+cur.close()
+conn.close()
+
+# print results
+print(results)
+
+# print results to csv
+pd.DataFrame(results).to_csv("results.csv")
+
+
+====================================================================================================
+
+PROMPT 7:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita, and income per million capita.
+
+Schema: 
+	food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 7:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita, and income per million capita.
+
+Schema: 
+	food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import psycopg2
+import pandas as pd
+
+# connect to the database
+conn = psycopg2.connect(host="localhost", port=5432, database="postgres", user="postgres", password="postgres")
+
+# create a cursor
+cur = conn.cursor()
+
+# create a function to get the data
+def get_data(state):
+	# get the data
+	cur.execute("""
+		SELECT
+			food_access.CensusTract,
+			food_access.State,
+			food_access.County,
+			food_access.Urban,
+			food_access.Pop2010,
+			food_access.Ohu2010,
+			food_access.LILATracts_1And10,
+			food_access.LILATracts_halfAnd10,
+			food_access.LILATracks_1And20,
+			food_access.LILATracts_Vehicle,
+			food_access.HUNVFlag,
+			food_access.LowIncomeTracts,
+			food_access.PovertyRate,
+			food_access.MedianFamilyIncome,
+			food_access.LA1and10,
+			food_access.LAhalfand10,
+			food_access.LA1and20,
+			food_access.LATracts_half,
+			food_access.LATracts1,
+			food_access.LATracts10,
+			food_access.LATracts20,
+			food_access.LATractsVehicle_20,
+			food_access.LAPOP1_10,
+			food_access.LAPOP05_10,
+			food_access.LAPOP1_20,
+			food_access.LALOWI1_10,
+			food_access.LALOWI05_10,
+			food_access.LALOWI1_20,
+			food_access.lapophalf,
+			food_access.lalowihalf,
+			food_access.lakidshalf,
+			food_access.laseniorshalf,
+			food_access.lawhitehalf,
+			food_access.lablackhalf,
+			food_access.laasianhalf,
+			food_access.lanhopihalf,
+			food_access.laaianhalf,
+			food_access.laomultirhalf,
+			food_access.lahisphalf,
+			food_access.lahunvhalf,
+			food_access.lasnaphalf,
+			food_access.lapop1,
+			food_access.lalowi1,
+			food_access.lakids1,
+			food_access.laseniors1,
+			food_access.lawhite1,
+			food_access.lablack1,
+			food_access.laasian1,
+			food_access.lanhopi1,
+			food_access.laaian1,
+			food_access.laomultir1,
+			food_access.lahisp1,
+			food_access.lahunv1,
+			food_access.lasnap1,
+			food_access.lapop10,
+			food_access.lalowi10,
+			food_access.lakids10,
+			food_access.laseniors10,
+			food_access.lawhite10,
+			food_access.lablack10,
+			food_access.laasian10,
+			food_access.lanhopi10,
+			food_access.laaian10,
+			food_access.laomultir10,
+			food_access.lahisp10,
+			food_access.lahunv10,
+			food_access.lasnap10,
+			food_access.lapop20,
+			food_access.lalowi20,
+			food_access.lakids20,
+			food_access.laseniors20,
+			food_access.lawhite20,
+			food_access.lablack20,
+			food_access.laasian20,
+			food_access.lanhopi20,
+			food_access.laaian20,
+			food_access.laomultir20,
+			food_access.lahisp20,
+			food_access.lahunv20,
+			food_access.lasnap20,
+			us_population.CensurYear,
+			us_population.State,
+			us_population.PopulationCount,
+			us_shootings.IncidentID,
+			us_shootings.Address,
+			us_shootings.IncidentDate,
+			us_shootings.State,
+			us_shootings.CityOrCountry,
+			us_shootings.VictimsKilled,
+			us_shootings.VictimsInjured,
+			us_shootings.SuspectsInjured,
+			us_shootings.SuspectsKilled,
+			us_shootings.SuspectsArrested
+		FROM
+			food_access,
+			us_population,
+			us_shootings
+		WHERE
+			food_access.State = us_population.State
+			AND food_access.State = us_shootings.State
+			AND us_population.CensurYear = us_shootings.CensurYear
+			AND us_population.State = %s
+			AND us_population.CensurYear = 2020
+			AND us_population.State = 'California'
+			AND us_population.CensurYear = 2020
+			AND us_population.State = 'California'
+			AND us_population.CensurYear = 2020
+			AND us_population.State = 'California'
+			AND us_population.CensurYear = 2020
+			AND us_population.State = 'California'
+			AND us_population.CensurYear = 2020
+			AND us_population.State = 'California'
+			AND us_population.CensurYear = 2020
+			AND us_population.State = 'California'
+			AND us_population.
+
+====================================================================================================
+
+PROMPT 8:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of suspects arrested each month over the years.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 8:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of suspects arrested each month over the years.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Sample Input:
+	(1, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(2, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(3, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(4, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(5, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(6, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(7, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(8, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(9, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(10, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(11, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(12, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(13, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(14, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(15, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(16, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(17, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(18, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(19, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(20, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(21, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(22, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(23, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(24, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(25, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(26, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(27, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(28, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(29, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(30, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(31, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(32, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(33, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(34, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(35, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(36, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(37, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(38, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(39, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(40, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(41, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(42, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(43, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(44, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(45, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(46, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(47, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(48, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(49, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(50, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(51, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(52, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(53, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(54, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(55, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(56, '123 Main St', '12/12/12', 'CA', 'San Francisco', 1, 1, 1, 1, 1)
+	(57, '123 Main St', '12/12/12
+
+====================================================================================================
+
+PROMPT 9:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of victims injured, suspects arrested and suspects killed for each incident.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 9:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of victims injured, suspects arrested and suspects killed for each incident.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# Get the number of victims injured, suspects arrested and suspects killed for each incident.
+# Return a list of tuples, where each tuple is a row of the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured, num_suspects_killed, num_suspects_arrested)
+# The tuples should be in the same order as the table.
+# The tuples should be in the form (incident_id, num_victims_injured, num_suspects_injured
+
+====================================================================================================
+
+PROMPT 10:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each month, get count of victims killed and average of victims killed in each shooting incident.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 10:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each month, get count of victims killed and average of victims killed in each shooting incident.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident.
+	
+	SELECT COUNT(VictimsKilled) as "Number of Victims Killed", AVG(VictimsKilled) as "Average of Victims Killed"
+	FROM us_shootings
+	WHERE State = "Alabama" AND CityOrCountry = "United States" AND IncidentDate = "January"
+	GROUP BY State, CityOrCountry, IncidentDate;
+	
+	For the month of January, get the count of victims killed and average of victims killed in each shooting incident
+
+====================================================================================================
+
+PROMPT 11:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get victims killed per million capita, victims injured per million capita, suspects arrested per million capita, and incident counts for million capita.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 11:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get victims killed per million capita, victims injured per million capita, suspects arrested per million capita, and incident counts for million capita.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import psycopg2
+import pandas as pd
+
+# connect to database
+conn = psycopg2.connect(
+    host = "localhost",
+    database = "postgres",
+    user = "postgres",
+    password = "postgres"
+)
+
+# create cursor
+cur = conn.cursor()
+
+# create query
+query = """
+SELECT
+	us_shootings.IncidentID,
+	us_shootings.Address,
+	us_shootings.IncidentDate,
+	us_shootings.State,
+	us_shootings.CityOrCountry,
+	us_shootings.VictimsKilled,
+	us_shootings.VictimsInjured,
+	us_shootings.SuspectsInjured,
+	us_shootings.SuspectsKilled,
+	us_shootings.SuspectsArrested,
+	us_population_county.PopulationCount,
+	us_population_county.County
+FROM
+	us_shootings
+INNER JOIN
+	us_population_county
+ON
+	us_shootings.State = us_population_county.State
+	AND us_shootings.CityOrCountry = us_population_county.County
+WHERE
+	us_shootings.VictimsKilled > 0
+	OR us_shootings.VictimsInjured > 0
+	OR us_shootings.SuspectsInjured > 0
+	OR us_shootings.SuspectsKilled > 0
+	OR us_shootings.SuspectsArrested > 0
+ORDER BY
+	us_shootings.IncidentID;
+"""
+
+# execute query
+cur.execute(query)
+
+# get results
+results = cur.fetchall()
+
+# close connection
+cur.close()
+conn.close()
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = pd.DataFrame(results)
+
+# create dataframe
+df = p
+
+====================================================================================================
+
+PROMPT 12:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita.
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 12:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita.
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000
+
+====================================================================================================
+
+PROMPT 13:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get victims killed per million capita.
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 13:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get victims killed per million capita.
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import psycopg2
+import pandas as pd
+
+# connect to database
+conn = psycopg2.connect(
+    host = "localhost",
+    database = "postgres",
+    user = "postgres",
+    password = "postgres"
+)
+
+# create cursor
+cur = conn.cursor()
+
+# create query
+query = """
+SELECT us_population.State, (us_population.PopulationCount / 1000000) as PopulationCount,
+(us_shootings.VictimsKilled / us_population.PopulationCount) as VictimsKilledPerMillion
+FROM us_population
+INNER JOIN us_shootings
+ON us_population.CensurYear = us_shootings.IncidentDate
+AND us_population.State = us_shootings.State
+AND us_population.State = 'Alabama'
+ORDER BY VictimsKilledPerMillion DESC;
+"""
+
+# execute query
+cur.execute(query)
+
+# get results
+results = cur.fetchall()
+
+# print results
+for result in results:
+    print(result)
+
+# close cursor
+cur.close()
+
+# close connection
+conn.close()
+
+
+====================================================================================================
+
