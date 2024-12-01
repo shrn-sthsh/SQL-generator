@@ -1,0 +1,2393 @@
+PROMPT 1:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of mass shootings for each month in USA.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 1:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of mass shootings for each month in USA.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import psycopg2
+import pandas as pd
+
+# connect to the database
+conn = psycopg2.connect(
+    host = "localhost",
+    database = "postgres",
+    user = "postgres",
+    password = "postgres"
+)
+
+# create a cursor
+cur = conn.cursor()
+
+# create a query
+query = "SELECT COUNT(IncidentID) FROM us_shootings WHERE State = 'USA' AND CityOrCountry = 'United States'"
+
+# execute the query
+cur.execute(query)
+
+# get the results
+results = cur.fetchall()
+
+# print the results
+print(results)
+
+# close the cursor
+cur.close()
+
+# close the connection
+conn.close()
+
+====================================================================================================
+
+PROMPT 2:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get total suspects arrested per million capita
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 2:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get total suspects arrested per million capita
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import psycopg2
+
+# connect to the database
+conn = psycopg2.connect(
+	host = "localhost",
+	database = "postgres",
+	user = "postgres",
+	password = "postgres"
+)
+
+# create a cursor
+cur = conn.cursor()
+
+# create a query
+query = """
+	SELECT
+		CensurYear,
+		State,
+		ROUND(PopulationCount/1000000,2) AS PopulationCount
+	FROM
+		us_population
+	GROUP BY
+		CensurYear,
+		State
+	ORDER BY
+		CensurYear,
+		State;
+"""
+
+# execute the query
+cur.execute(query)
+
+# get the results
+rows = cur.fetchall()
+
+# print the results
+for row in rows:
+	print(row)
+
+# close the cursor
+cur.close()
+
+# close the connection
+conn.close()
+
+
+====================================================================================================
+
+PROMPT 3:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 3:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import pandas as pd
+
+# get data
+df = pd.read_csv('homelessness.csv')
+
+# get year
+year = df['CALENDAR_YEAR'].tolist()[0]
+
+# get location
+location = df['LOCATION'].tolist()[0]
+
+# get age group
+age_group = df['AGE_GROUP_PUBLIC'].tolist()[0]
+
+# get homeless count
+homeless_count = df['EXPERIENCING_HOMELESSNESS_CNT'].tolist()[0]
+
+# get shooting count
+shooting_count = df['SHOOTING_CNT'].tolist()[0]
+
+# get year
+year = df['CALENDAR_YEAR'].tolist()[0]
+
+# get location
+location = df['LOCATION'].tolist()[0]
+
+# get age group
+age_group = df['AGE_GROUP_PUBLIC'].tolist()[0]
+
+# get homeless count
+homeless_count = df['EXPERIENCING_HOMELESSNESS_CNT'].tolist()[0]
+
+# get shooting count
+shooting_count = df['SHOOTING_CNT'].tolist()[0]
+
+# get year
+year = df['CALENDAR_YEAR'].tolist()[0]
+
+# get location
+location = df['LOCATION'].tolist()[0]
+
+# get age group
+age_group = df['AGE_GROUP_PUBLIC'].tolist()[0]
+
+# get homeless count
+homeless_count = df['EXPERIENCING_HOMELESSNESS_CNT'].tolist()[0]
+
+# get shooting count
+shooting_count = df['SHOOTING_CNT'].tolist()[0]
+
+# get year
+year = df['CALENDAR_YEAR'].tolist()[0]
+
+# get location
+location = df['LOCATION'].tolist()[0]
+
+# get age group
+age_group = df['AGE_GROUP_PUBLIC'].tolist()[0]
+
+# get homeless count
+homeless_count = df['EXPERIENCING_HOMELESSNESS_CNT'].tolist()[0]
+
+# get shooting count
+shooting_count = df['SHOOTING_CNT'].tolist()[0]
+
+# get year
+year = df['CALENDAR_YEAR'].tolist()[0]
+
+# get location
+location = df['LOCATION'].tolist()[0]
+
+# get age group
+age_group = df['AGE_GROUP_PUBLIC'].tolist()[0]
+
+# get homeless count
+homeless_count = df['EXPERIENCING_HOMELESSNESS_CNT'].tolist()[0]
+
+# get shooting count
+shooting_count = df['SHOOTING_CNT'].tolist()[0]
+
+# get year
+year = df['CALENDAR_YEAR'].tolist()[0]
+
+# get location
+location = df['LOCATION'].tolist()[0]
+
+# get age group
+age_group = df['AGE_GROUP_PUBLIC'].tolist()[0]
+
+# get homeless count
+homeless_count = df['EXPERIENCING_HOMELESSNESS_CNT'].tolist()[0]
+
+# get shooting count
+shooting_count = df['SHOOTING_CNT'].tolist()[0]
+
+# get year
+year = df['CALENDAR_YEAR'].tolist()[0]
+
+# get location
+location = df['LOCATION'].tolist()[0]
+
+# get age group
+age_group = df['AGE_GROUP_PUBLIC'].tolist()[0]
+
+# get homeless count
+homeless_count = df['EXPERIENCING_HOMELESSNESS_CNT'].tolist()[0]
+
+# get shooting count
+shooting_count = df['SHOOTING_CNT'].tolist()[0]
+
+# get year
+year = df['CALENDAR_YEAR'].tolist()[0]
+
+# get location
+location = df['LOCATION'].tolist()[0]
+
+# get age group
+age_group = df['AGE_GROUP_PUBLIC'].tolist()[0]
+
+# get homeless count
+homeless_count = df['EXPERIENCING_HOMELESSNESS_CNT'].tolist()[0]
+
+# get shooting count
+shooting_count = df['SHOOTING_CNT'].tolist()[0]
+
+# get year
+year = df['CALENDAR_YEAR'].tolist()[0]
+
+# get location
+location = df['LOCATION'].tolist()[0]
+
+# get age group
+age_group = df['AGE_GROUP_PUBLIC'].tolist()[0]
+
+# get homeless count
+homeless_count = df['EXPERIENCING_HOMELESSNESS_CNT'].tolist()[0]
+
+# get shooting count
+shooting_count = df['SHOOTING_CNT'].tolist()[0]
+
+# get year
+year = df['CALENDAR_YEAR'].tolist()[0]
+
+# get location
+location = df['LOCATION'].tolist()[0]
+
+# get age group
+age_group = df['AGE_GROUP_PUBLIC'].tolist()[0]
+
+# get homeless count
+homeless_count = df['EXPERIENCING_HOMELESSNESS_CNT'].tolist()[0]
+
+# get shooting count
+shooting_count = df['SHOOTING_CNT'].tolist()[0]
+
+# get year
+year = df['CALENDAR_YEAR'].tolist()[0]
+
+# get location
+location = df['LOCATION'].tolist()[0]
+
+# get age group
+age_group = df['AGE_GROUP_PUBLIC'].tolist()[0]
+
+# get homeless count
+homeless_count = df['EXPERIENCING_HOMELESSNESS_CNT'].tolist()[0]
+
+# get shooting count
+shooting_count = df['SHOOTING_CNT'].tolist()[0]
+
+# get year
+year = df['CALENDAR_YEAR'].tolist()[0]
+
+# get location
+location = df['LOCATION'].tolist()[0]
+
+# get age group
+age_group = df['AGE_GROUP_PUBLIC'].tolist()[0]
+
+# get homeless count
+homeless_count = df['EXPERIENCING_HOMELESSNESS_CNT'].tolist()[0]
+
+# get shooting count
+shooting_count = df['SHOOTING_CNT'].tolist()[0]
+
+# get year
+year = df['CALENDAR_YEAR'].tolist()[0]
+
+# get location
+location = df['LOCATION'].tolist()[0]
+
+# get age group
+age_group = df['AGE_GROUP_PUBLIC'].tolist()[0]
+
+# get homeless count
+homeless_count = df['EXPERIENCING_HOMELESSNESS_CNT'].tolist()[0]
+
+# get shooting count
+shooting_count = df['SHOOTING_CNT'].tolist()[0]
+
+# get year
+year = df['CALENDAR_YEAR'].tolist()[0]
+
+# get location
+location = df['LOCATION
+
+====================================================================================================
+
+PROMPT 4:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita for each county of California.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 4:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita for each county of California.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import psycopg2
+import pandas as pd
+
+# connect to database
+conn = psycopg2.connect(
+	host = "localhost",
+	database = "homelessness",
+	user = "postgres",
+	password = "postgres"
+)
+
+# create a cursor
+cur = conn.cursor()
+
+# create a query
+query = "SELECT EXPERIENCING_HOMELESSNESS_CNT, LOCATION, CALENDAR_YEAR FROM homeless_county_experiencing_homelessness_age_demographics WHERE CALENDAR_YEAR = 2019"
+
+# execute the query
+cur.execute(query)
+
+# get the results
+results = cur.fetchall()
+
+# close the cursor
+cur.close()
+
+# close the connection
+conn.close()
+
+# create a dataframe
+df = pd.DataFrame(results)
+
+# rename the columns
+df.columns = ['Count', 'County', 'Year']
+
+# group by the year and county
+df_grouped = df.groupby(['Year', 'County'])['Count'].sum()
+
+# reset the index
+df_grouped = df_grouped.reset_index()
+
+# create a new dataframe
+df_new = df_grouped.pivot(index = 'Year', columns = 'County', values = 'Count')
+
+# create a new column
+df_new['Total'] = df_new.sum(axis = 1)
+
+# create a new dataframe
+df_new_2 = df_new.drop(['Total'], axis = 1)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, 'Total'] = df_new_2.sum(axis = 0)
+
+# create a new dataframe
+df_new_2.loc[2019, '
+
+====================================================================================================
+
+PROMPT 5:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita and US shooting incidents per million capita for each county of California.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+us_population_county (PopulationCount, County)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 5:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita and US shooting incidents per million capita for each county of California.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+us_population_county (PopulationCount, County)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import psycopg2
+import psycopg2.extras
+
+# connect to the database
+try:
+	conn = psycopg2.connect("dbname=homelessness user=postgres password=postgres host=localhost")
+except:
+	print("I am unable to connect to the database")
+
+# create a cursor
+cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+
+# get the data
+cur.execute("""
+	SELECT
+		EXPERIENCING_HOMELESSNESS_CNT,
+		LOCATION
+	FROM
+		experiencing_homelessness_age_demographics
+	WHERE
+		CALENDAR_YEAR = 2019
+		AND
+		EXPERIENCING_HOMELESSNESS_CNT > 0
+	ORDER BY
+		EXPERIENCING_HOMELESSNESS_CNT DESC
+	LIMIT
+		1;
+""")
+
+# get the data
+data = cur.fetchall()
+
+# print the data
+print(data)
+
+# close the cursor
+cur.close()
+
+# close the connection
+conn.close()
+
+====================================================================================================
+
+PROMPT 6:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get shooting incidents per million capita, and income per million capita.
+
+Schema: 
+	food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+us_population_county (PopulationCount, County)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 6:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get shooting incidents per million capita, and income per million capita.
+
+Schema: 
+	food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+us_population_county (PopulationCount, County)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import psycopg2
+import psycopg2.extras
+import pandas as pd
+import numpy as np
+import re
+
+# connect to the database
+conn = psycopg2.connect(host="localhost", database="postgres", user="postgres", password="postgres")
+cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+
+# get the data
+cur.execute("""
+	SELECT
+		food_access.CensusTract,
+		food_access.State,
+		food_access.County,
+		food_access.Urban,
+		food_access.Pop2010,
+		food_access.Ohu2010,
+		food_access.LILATracts_1And10,
+		food_access.LILATracts_halfAnd10,
+		food_access.LILATracks_1And20,
+		food_access.LILATracts_Vehicle,
+		food_access.HUNVFlag,
+		food_access.LowIncomeTracts,
+		food_access.PovertyRate,
+		food_access.MedianFamilyIncome,
+		food_access.LA1and10,
+		food_access.LAhalfand10,
+		food_access.LA1and20,
+		food_access.LATracts_half,
+		food_access.LATracts1,
+		food_access.LATracts10,
+		food_access.LATracts20,
+		food_access.LATractsVehicle_20,
+		food_access.LAPOP1_10,
+		food_access.LAPOP05_10,
+		food_access.LAPOP1_20,
+		food_access.LALOWI1_10,
+		food_access.LALOWI05_10,
+		food_access.LALOWI1_20,
+		food_access.lapophalf,
+		food_access.lalowihalf,
+		food_access.lakidshalf,
+		food_access.laseniorshalf,
+		food_access.lawhitehalf,
+		food_access.lablackhalf,
+		food_access.laasianhalf,
+		food_access.lanhopihalf,
+		food_access.laaianhalf,
+		food_access.laomultirhalf,
+		food_access.lahisphalf,
+		food_access.lahunvhalf,
+		food_access.lasnaphalf,
+		food_access.lapop1,
+		food_access.lalowi1,
+		food_access.lakids1,
+		food_access.laseniors1,
+		food_access.lawhite1,
+		food_access.lablack1,
+		food_access.laasian1,
+		food_access.lanhopi1,
+		food_access.laaian1,
+		food_access.laomultir1,
+		food_access.lahisp1,
+		food_access.lahunv1,
+		food_access.lasnap1,
+		food_access.lapop10,
+		food_access.lalowi10,
+		food_access.lakids10,
+		food_access.laseniors10,
+		food_access.lawhite10,
+		food_access.lablack10,
+		food_access.laasian10,
+		food_access.lanhopi10,
+		food_access.laaian10,
+		food_access.laomultir10,
+		food_access.lahisp10,
+		food_access.lahunv10,
+		food_access.lasnap10,
+		food_access.lapop20,
+		food_access.lalowi20,
+		food_access.lakids20,
+		food_access.laseniors20,
+		food_access.lawhite20,
+		food_access.lablack20,
+		food_access.laasian20,
+		food_access.lanhopi20,
+		food_access.laaian20,
+		food_access.laomultir20,
+		food_access.lahisp20,
+		food_access.lahunv20,
+		food_access.lasnap20,
+		us_population_county.PopulationCount,
+		us_population_county.County,
+		us_shootings.IncidentID,
+		us_shootings.Address,
+		us_shootings.IncidentDate,
+		us_shootings.State,
+		us_shootings.CityOrCountry,
+		us_shootings.VictimsKilled,
+		us_shootings.VictimsInjured,
+		us_shootings.SuspectsInjured,
+		us_shootings.SuspectsKilled,
+		us_shootings.SuspectsArrested
+	FROM
+		food_access
+	INNER JOIN
+		us_population_county
+	ON
+		food_access.CensusTract = us_population_county.CensusTract
+	INNER JOIN
+		us_shootings
+	ON
+		food_access.CensusTract = us_shootings.CensusTract
+	ORDER BY
+		food_access.CensusTract,
+		food_access.State,
+		food_access.County,
+		food_access.Urban,
+		food_access.Pop2010,
+		us_shootings.IncidentID
+	;
+""")
+
+# get the results
+results = cur.fetchall()
+
+# close the connection
+cur.close()
+conn.close()
+
+# create a dataframe
+df = pd.DataFrame(results)
+
+# get the number of rows
+num_rows = len(df)
+
+# create a list of the states
+states = df['State'].unique()
+
+# create a list of
+
+====================================================================================================
+
+PROMPT 7:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita, and income per million capita.
+
+Schema: 
+	food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 7:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita, and income per million capita.
+
+Schema: 
+	food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import psycopg2
+import psycopg2.extras
+import pandas as pd
+
+# connect to the database
+conn = psycopg2.connect(
+    host = "localhost",
+    database = "postgres",
+    user = "postgres",
+    password = "postgres"
+)
+
+# create a cursor
+cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+
+# create a function to get the data
+def get_data(state):
+    # get the data
+    cur.execute("""
+        SELECT
+            food_access.CensusTract,
+            food_access.State,
+            food_access.County,
+            food_access.Urban,
+            food_access.Pop2010,
+            food_access.Ohu2010,
+            food_access.LILATracts_1And10,
+            food_access.LILATracts_halfAnd10,
+            food_access.LILATracks_1And20,
+            food_access.LILATracts_Vehicle,
+            food_access.HUNVFlag,
+            food_access.LowIncomeTracts,
+            food_access.PovertyRate,
+            food_access.MedianFamilyIncome,
+            food_access.LA1and10,
+            food_access.LAhalfand10,
+            food_access.LA1and20,
+            food_access.LATracts_half,
+            food_access.LATracts1,
+            food_access.LATracts10,
+            food_access.LATracts20,
+            food_access.LATractsVehicle_20,
+            food_access.LAPOP1_10,
+            food_access.LAPOP05_10,
+            food_access.LAPOP1_20,
+            food_access.LALOWI1_10,
+            food_access.LALOWI05_10,
+            food_access.LALOWI1_20,
+            food_access.lapophalf,
+            food_access.lalowihalf,
+            food_access.lakidshalf,
+            food_access.laseniorshalf,
+            food_access.lawhitehalf,
+            food_access.lablackhalf,
+            food_access.laasianhalf,
+            food_access.lanhopihalf,
+            food_access.laaianhalf,
+            food_access.laomultirhalf,
+            food_access.lahisphalf,
+            food_access.lahunvhalf,
+            food_access.lasnaphalf,
+            food_access.lapop1,
+            food_access.lalowi1,
+            food_access.lakids1,
+            food_access.laseniors1,
+            food_access.lawhite1,
+            food_access.lablack1,
+            food_access.laasian1,
+            food_access.lanhopi1,
+            food_access.laaian1,
+            food_access.laomultir1,
+            food_access.lahisp1,
+            food_access.lahunv1,
+            food_access.lasnap1,
+            food_access.lapop10,
+            food_access.lalowi10,
+            food_access.lakids10,
+            food_access.laseniors10,
+            food_access.lawhite10,
+            food_access.lablack10,
+            food_access.laasian10,
+            food_access.lanhopi10,
+            food_access.laaian10,
+            food_access.laomultir10,
+            food_access.lahisp10,
+            food_access.lahunv10,
+            food_access.lasnap10,
+            food_access.lapop20,
+            food_access.lalowi20,
+            food_access.lakids20,
+            food_access.laseniors20,
+            food_access.lawhite20,
+            food_access.lablack20,
+            food_access.laasian20,
+            food_access.lanhopi20,
+            food_access.laaian20,
+            food_access.laomultir20,
+            food_access.lahisp20,
+            food_access.lahunv20,
+            food_access.lasnap20,
+            us_population.CensurYear,
+            us_population.State,
+            us_population.PopulationCount,
+            us_shootings.IncidentID,
+            us_shootings.Address,
+            us_shootings.IncidentDate,
+            us_shootings.State,
+            us_shootings.CityOrCountry,
+            us_shootings.VictimsKilled,
+            us_shootings.VictimsInjured,
+            us_shootings.SuspectsInjured,
+            us_shootings.SuspectsKilled,
+            us_shootings.SuspectsArrested
+        FROM
+            food_access
+            INNER JOIN us_population
+            ON food_access.CensusTract = us_population.CensurYear
+            INNER JOIN us_shootings
+            ON food_access.CensusTract = us_shootings.IncidentID
+            WHERE
+                food_access.State = %s
+        ORDER BY
+            food_access.CensusTract,
+            us_population.CensurYear,
+            us_shootings.IncidentID;
+    """, (state,))
+    # get the data
+    data = cur.fetchall()
+    # return the data
+    return data
+
+# create a function to get the data
+def get_data_df(state):
+    # get the data
+    data = get_data(state)
+    # create a dataframe
+    df = pd.DataFrame
+
+====================================================================================================
+
+PROMPT 8:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of suspects arrested each month over the years.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 8:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of suspects arrested each month over the years.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# Get the month of the incident
+# Get the year of the incident
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of victims injured
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of victims killed
+# Get the number of victims injured
+# Get the number of suspects arrested
+# Get the number of victims injured
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+# Get the number of suspects injured
+# Get the number of suspects arrested
+# Get the number of victims killed
+# Get the number of suspects killed
+
+
+====================================================================================================
+
+PROMPT 9:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of victims injured, suspects arrested and suspects killed for each incident.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 9:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of victims injured, suspects arrested and suspects killed for each incident.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Sample Input:
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	
+
+====================================================================================================
+
+PROMPT 10:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each month, get count of victims killed and average of victims killed in each shooting incident.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 10:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each month, get count of victims killed and average of victims killed in each shooting incident.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import psycopg2
+import pandas as pd
+
+# connect to the database
+conn = psycopg2.connect(
+    host = "localhost",
+    database = "postgres",
+    user = "postgres",
+    password = "postgres"
+)
+
+# create a cursor
+cur = conn.cursor()
+
+# create a list of months
+months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+# create a list of states
+states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
+
+# create a list of cities
+cities = ['Atlanta', 'Austin', 'Boston', 'Chicago', 'Dallas', 'Denver', 'Detroit', 'Houston', 'Los Angeles', 'Miami', 'Minneapolis', 'New York City', 'New Orleans', 'New York', 'Orlando', 'Philadelphia', 'Phoenix', 'Portland', 'San Antonio', 'San Diego', 'San Francisco', 'Seattle', 'Washington D.C.']
+
+# create a list of states
+countries = ['Afghanistan', 'Albania', 'Algeria', 'American Samoa', 'Andorra', 'Angola', 'Anguilla', 'Antarctica', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Aruba', 'Ascension Island', 'Australia', 'Austria', 'Azerbaijan', 'Azores', 'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Barbuda', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia', 'Bonaire, Sint Eustatius and Saba', 'Bosnia and Herzegovina', 'Botswana', 'Bouvet Island', 'Brazil', 'British Indian Ocean Territory', 'Brunei Darussalam', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cambodia', 'Cameroon', 'Canada', 'Cape Verde', 'Cayman Islands', 'Central African Republic', 'Chad', 'Chagos Archipelago', 'Chile', 'China', 'Christmas Island', 'Cocos (Keeling) Islands', 'Colombia', 'Comoros', 'Congo', 'Congo, Democratic Republic of the', 'Cook Islands', 'Costa Rica', 'Croatia', 'Cuba', 'Curaçao', 'Cyprus', 'Czech Republic', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Ethiopia', 'Falkland Islands (Malvinas)', 'Faroe Islands', 'Fiji', 'Finland', 'France', 'French Guiana', 'French Polynesia', 'French Southern and Antarctic Lands', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Gibraltar', 'Greece', 'Greenland', 'Grenada', 'Grenadines', 'Guadeloupe', 'Guam', 'Guatemala', 'Guernsey', 'Guinea', 'Guinea-Bissau', 'Guyana', 'Haiti', 'Heard Island and McDonald Islands', 'Honduras', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Isle of Man', 'Israel', 'Italy', 'Ivory Coast', 'Jamaica', 'Japan', 'Jersey', 'Jordan', 'Kazakhstan', 'Kenya', 'Kiribati', 'Korea, Democratic People\'s Republic of', 'Korea, Republic of', 'Kuwait', 'Kyrgyzstan', 'Lao People\'s Democratic Republic', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Macedonia', 'Madagascar', 'Madeira Islands', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Martinique', 'Mauritania', 'Mauritius', 'Mayotte', 'Mexico', 'Micronesia, Federated States of', 'Moldova, Republic of', 'Monaco', 'Mongolia', 'Montenegro', 'Montserrat', 'Morocco', 'Mozambique', 'Myanmar', 'Namibia', 'Nauru', 'Nepal', 'Netherlands', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands', 'Nepal', 'Netherlands', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Netherlands Antilles', 'Nether
+
+====================================================================================================
+
+PROMPT 11:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get victims killed per million capita, victims injured per million capita, suspects arrested per million capita, and incident counts for million capita.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 11:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get victims killed per million capita, victims injured per million capita, suspects arrested per million capita, and incident counts for million capita.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	For the following data, the answer is:
+	SELECT CityOrCountry, SuspectsKilled, SuspectsArrested, VictimsKilled, VictimsInjured, SuspectsInjured, PopulationCount, IncidentDate, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentDate, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerMillion, IncidentID, State, CityOrCountry, VictimsKilledPerMillion, SuspectsKilledPerMillion, SuspectsArrestedPerMillion, VictimsInjuredPerMillion, PopulationCountPerM
+
+====================================================================================================
+
+PROMPT 12:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita.
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 12:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita.
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000)
+	
+	For the state of California, get the shooting incidents per million capita.
+	
+	SELECT State, PopulationCount / (ShootingIncidents / 1000000)
+	FROM us_population
+	WHERE CensurYear = 2015
+	AND State = 'CA'
+	
+	Answer:
+	California, PopulationCount / (ShootingIncidents / 1000000
+
+====================================================================================================
+
+PROMPT 13:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get victims killed per million capita.
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 13:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get victims killed per million capita.
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# import statements
+import psycopg2
+
+# connect to the database
+conn = psycopg2.connect(
+	host = "localhost",
+	database = "postgres",
+	user = "postgres",
+	password = "postgres"
+)
+
+# create a cursor
+cur = conn.cursor()
+
+# create a query
+query = """
+	SELECT
+		State,
+		CASE
+			WHEN PopulationCount < 10000000 THEN 'INSUFFICENT'
+			ELSE 'SUFFICIENT'
+		END AS PopulationSufficient
+	FROM
+		us_population
+	WHERE
+		CensurYear = '2010'
+	ORDER BY
+		State;
+"""
+
+# execute the query
+cur.execute(query)
+
+# get the results
+rows = cur.fetchall()
+
+# print the results
+for row in rows:
+	print(row)
+
+# close the cursor
+cur.close()
+
+# close the connection
+conn.close()
+
+
+====================================================================================================
+

@@ -1,5 +1,5 @@
-import test.suites.case.sql_accuracy as suite
-from src.llm.gpt_neox_20b import gpt_neox_llm
+import test.suites.case.sql_baseline_accuracy as suite
+from src.llm.falcon_11b import falcon_llm
 
 import test
 
@@ -28,7 +28,7 @@ for path_name, path in vars(arguments).items():
 
 # Load model
 test.logging.info("LOADING MODEL")
-model: gpt_neox_llm = gpt_neox_llm()
+model: falcon_llm = falcon_llm()
 
 # Run test
 test.logging.info("STARTING TEST")

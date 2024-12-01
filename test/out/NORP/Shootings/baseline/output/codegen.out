@@ -1,0 +1,3406 @@
+PROMPT 1:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of mass shootings for each month in USA.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 1:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of mass shootings for each month in USA.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# Import statements
+import pandas as pd
+
+# Get the data
+df = pd.read_csv('mass_shootings.csv')
+
+# Get the month and year
+month = df['month'].tolist()
+year = df['year'].tolist()
+
+# Get the count
+count = df['count'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'].tolist()
+
+# Get the median
+median = df['median'].tolist()
+
+# Get the standard deviation
+std = df['std'].tolist()
+
+# Get the minimum
+min = df['min'].tolist()
+
+# Get the maximum
+max = df['max'].tolist()
+
+# Get the range
+range = df['range'].tolist()
+
+# Get the average
+average = df['average'
+
+====================================================================================================
+
+PROMPT 2:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get total suspects arrested per million capita
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 2:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get total suspects arrested per million capita
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	Input:
+		"What is the total number of suspects arrested per million capita in each state?"
+	Output:
+		"SELECT state, SUM(suspect) FROM crime GROUP BY state"
+
+"""
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your code here
+
+# Write your
+
+====================================================================================================
+
+PROMPT 3:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 3:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless population and US shooting incidents for each year.
+
+# Write your code here.
+
+# Get the count of homeless
+
+====================================================================================================
+
+PROMPT 4:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita for each county of California.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 4:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita for each county of California.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# Write your code here!
+
+# Get the population of each county in California
+# SELECT population, county, state
+# FROM counties
+# WHERE state = 'CA'
+# ORDER BY population DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# WHERE county = 'Los Angeles'
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get the number of homeless people in each county
+# SELECT COUNT(homeless)
+# FROM homeless
+# GROUP BY county
+# ORDER BY COUNT(homeless) DESC
+# LIMIT 1;
+
+# Get
+
+====================================================================================================
+
+PROMPT 5:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita and US shooting incidents per million capita for each county of California.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 5:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita and US shooting incidents per million capita for each county of California.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+"""
+
+# Write your code here!
+
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents of each county
+# Get the population of each county
+# Get the shooting incidents
+
+====================================================================================================
+
+PROMPT 6:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get shooting incidents per million capita, and income per million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 6:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get shooting incidents per million capita, and income per million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Input:
+	- county: a string, the name of a county
+	- income: a float, the income per capita of the county
+	- shooting: a float, the shooting incidents per million capita of the county
+
+Output:
+	- SQL statement: a string, the SQL statement to answer the question
+
+'''
+
+# Write your MySQL query statement below
+
+SELECT
+	county,
+	income,
+	shooting
+FROM
+	county_data
+WHERE
+	income < shooting
+
+# OPTIONAL: You can add more columns to the SELECT statement if you like.
+# You can also add more than one WHERE clause if you like.
+# You can also add ORDER BY if you like.
+# You can also add LIMIT if you like.
+# You can also add DISTINCT if you like.
+# You can also add a FROM clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a LIMIT clause if you like.
+# You can also add a OFFSET clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can also add a ORDER BY clause if you like.
+# You can also add a WHERE clause if you like.
+# You can also add a GROUP BY clause if you like.
+# You can also add a HAVING clause if you like.
+# You can
+
+====================================================================================================
+
+PROMPT 7:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita, and income per million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 7:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita, and income per million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	Input:
+		State: California
+		Shooting incidents per million capita: 0.1
+		Income per million capita: $1,000,000
+	Output:
+		SELECT * FROM shooting_incidents_per_million_capita WHERE state = 'California' AND shooting_incidents_per_million_capita = 0.1 AND income_per_million_capita = 1000000.0;
+"""
+
+import sqlite3
+
+def main():
+	# Connect to the database
+	db = sqlite3.connect("census.db")
+	cursor = db.cursor()
+
+	# Get the state
+	state = input("State: ")
+
+	# Get the shooting incidents per million capita
+	shooting_incidents_per_million_capita = input("Shooting incidents per million capita: ")
+
+	# Get the income per million capita
+	income_per_million_capita = input("Income per million capita: ")
+
+	# Generate the SQL statement
+	sql_statement = "SELECT * FROM shooting_incidents_per_million_capita WHERE state = '" + state + "' AND shooting_incidents_per_million_capita = " + shooting_incidents_per_million_capita + " AND income_per_million_capita = " + income_per_million_capita + ";"
+
+	# Execute the SQL statement
+	cursor.execute(sql_statement)
+
+	# Get the results
+	results = cursor.fetchall()
+
+	# Print the results
+	print(results)
+
+	# Close the database
+	db.close()
+
+if __name__ == "__main__":
+	main()
+
+====================================================================================================
+
+PROMPT 8:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of suspects arrested each month over the years.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 8:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of suspects arrested each month over the years.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	Input:
+		"What is the count of suspects arrested each month over the years?"
+	Output:
+		"SELECT COUNT(suspect_id) FROM suspects_arrested GROUP BY month_year"
+
+"""
+
+# Get the input
+question = input("What is the count of suspects arrested each month over the years?")
+
+# Get the answer
+answer = "SELECT COUNT(suspect_id) FROM suspects_arrested GROUP BY month_year"
+
+# Print the answer
+print(answer)
+
+
+====================================================================================================
+
+PROMPT 9:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of victims injured, suspects arrested and suspects killed for each incident.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 9:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of victims injured, suspects arrested and suspects killed for each incident.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Input:
+	- incident_id: incident ID
+	- incident_type: type of incident
+	- victim_id: victim ID
+	- suspect_id: suspect ID
+	- victim_age: victim age
+	- victim_gender: victim gender
+	- victim_race: victim race
+	- suspect_age: suspect age
+	- suspect_gender: suspect gender
+	- suspect_race: suspect race
+	- incident_date: incident date
+	- incident_time: incident time
+	- location: location
+	- police_district: police district
+	- police_precinct: police precinct
+	- police_beat: police beat
+	- police_shift: police shift
+	- victim_injured: victim injured
+	- victim_hospitalized: victim hospitalized
+	- victim_death: victim death
+	- suspect_arrested: suspect arrested
+	- suspect_injured: suspect injured
+	- suspect_hospitalized: suspect hospitalized
+	- suspect_death: suspect death
+
+Output:
+	- SQL statement
+
+'''
+
+# Get count of victims injured, suspects arrested and suspects killed for each incident.
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_race, suspect_age, suspect_gender, suspect_race, incident_date, incident_time, location, police_district, police_precinct, police_beat, police_shift, victim_injured, victim_hospitalized, victim_death, suspect_arrested, suspect_injured, suspect_hospitalized, suspect_death
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_race, suspect_age, suspect_gender, suspect_race, incident_date, incident_time, location, police_district, police_precinct, police_beat, police_shift, victim_injured, victim_hospitalized, victim_death, suspect_arrested, suspect_injured, suspect_hospitalized, suspect_death
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_race, suspect_age, suspect_gender, suspect_race, incident_date, incident_time, location, police_district, police_precinct, police_beat, police_shift, victim_injured, victim_hospitalized, victim_death, suspect_arrested, suspect_injured, suspect_hospitalized, suspect_death
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_race, suspect_age, suspect_gender, suspect_race, incident_date, incident_time, location, police_district, police_precinct, police_beat, police_shift, victim_injured, victim_hospitalized, victim_death, suspect_arrested, suspect_injured, suspect_hospitalized, suspect_death
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_race, suspect_age, suspect_gender, suspect_race, incident_date, incident_time, location, police_district, police_precinct, police_beat, police_shift, victim_injured, victim_hospitalized, victim_death, suspect_arrested, suspect_injured, suspect_hospitalized, suspect_death
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_race, suspect_age, suspect_gender, suspect_race, incident_date, incident_time, location, police_district, police_precinct, police_beat, police_shift, victim_injured, victim_hospitalized, victim_death, suspect_arrested, suspect_injured, suspect_hospitalized, suspect_death
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_race, suspect_age, suspect_gender, suspect_race, incident_date, incident_time, location, police_district, police_precinct, police_beat, police_shift, victim_injured, victim_hospitalized, victim_death, suspect_arrested, suspect_injured, suspect_hospitalized, suspect_death
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_race, suspect_age, suspect_gender, suspect_race, incident_date, incident_time, location, police_district, police_precinct, police_beat, police_shift, victim_injured, victim_hospitalized, victim_death, suspect_arrested, suspect_injured, suspect_hospitalized, suspect_death
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_race, suspect_age, suspect_gender, suspect_race, incident_date, incident_time, location, police_district, police_precinct, police_beat, police_shift, victim_injured, victim_hospitalized, victim_death, suspect_arrested, suspect_injured, suspect_hospitalized, suspect_death
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_race, suspect_age, suspect_gender, suspect_race, incident_date, incident_time, location, police_district, police_precinct, police_beat, police_shift, victim_injured, victim_hospitalized, victim_death, suspect_arrested, suspect_injured, suspect_hospitalized, suspect_death
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_race, suspect_age, suspect_gender, suspect_race, incident_date, incident_time, location, police_district, police_precinct, police_beat, police_shift, victim_injured, victim_hospitalized, victim_death, suspect_arrested, suspect_injured, suspect_hospitalized, suspect_death
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_race, suspect_age, suspect_gender, suspect_race, incident_date, incident_time, location, police_district, police_precinct, police_beat, police_shift, victim_injured, victim_hospitalized, victim_death, suspect_arrested, suspect_injured, suspect_hospitalized, suspect_death
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_race, suspect_age, suspect_gender, suspect_race, incident_date, incident_time, location, police_district, police_precinct, police_beat, police_shift, victim_injured, victim_hospitalized, victim_death, suspect_arrested, suspect_injured, suspect_hospitalized, suspect_death
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_race, suspect_age, suspect_gender, suspect_race, incident_date, incident_time, location, police_district, police_precinct, police_beat, police_shift, victim_injured, victim_hospitalized, victim_death, suspect_arrested, suspect_injured, suspect_hospitalized, suspect_death
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_race, suspect_age, suspect_gender, suspect_race, incident_date, incident_time, location, police_district, police_precinct, police_beat, police_shift, victim_injured, victim_hospitalized, victim_death, suspect_arrested, suspect_injured, suspect_hospitalized, suspect_death
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_race, suspect_age, suspect_gender, suspect_race, incident_date, incident_time, location, police_district, police_precinct, police_beat, police_shift, victim_injured, victim_hospitalized, victim_death, suspect_arrested, suspect_injured, suspect_hospitalized, suspect_death
+
+# Get incident_id, incident_type, victim_id, suspect_id, victim_age, victim_gender, victim_
+
+====================================================================================================
+
+PROMPT 10:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each month, get count of victims killed and average of victims killed in each shooting incident.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 10:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each month, get count of victims killed and average of victims killed in each shooting incident.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Input Format:
+	A list of lists of the form:
+	[
+		[
+			"MONTH_1",
+			"MONTH_2",
+			...
+			"MONTH_N"
+		],
+		[
+			"KILLS_1",
+			"KILLS_2",
+			...
+			"KILLS_N"
+		],
+		...
+		[
+			"KILLS_1",
+			"KILLS_2",
+			...
+			"KILLS_N"
+		]
+	]
+
+Output Format:
+	A list of lists of the form:
+	[
+		[
+			"ANSWER_1",
+			"ANSWER_2",
+			...
+			"ANSWER_N"
+		],
+		[
+			"ANSWER_1",
+			"ANSWER_2",
+			...
+			"ANSWER_N"
+		],
+		...
+		[
+			"ANSWER_1",
+			"ANSWER_2",
+			...
+			"ANSWER_N"
+		]
+	]
+
+Sample Input:
+	[
+		[
+			"JANUARY",
+			"FEBRUARY",
+			"MARCH",
+			"APRIL",
+			"MAY",
+			"JUNE",
+			"JULY",
+			"AUGUST",
+			"SEPTEMBER",
+			"OCTOBER",
+			"NOVEMBER",
+			"DECEMBER"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		[
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1
+
+====================================================================================================
+
+PROMPT 11:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get victims killed per million capita, victims injured per million capita, suspects arrested per million capita, and incident counts for million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 11:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get victims killed per million capita, victims injured per million capita, suspects arrested per million capita, and incident counts for million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	For county 'Arapahoe', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Arapahoe' AND victims_killed_per_million_capita > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND victims_injured_per_million_capita > 0.0;
+	
+	For county 'Jefferson', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Jefferson' AND suspects_arrested_per_million_capita > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0;
+	
+	For county 'Denver', the answer is:
+	SELECT COUNT(incident_count) FROM crime_incidents WHERE county = 'Denver' AND incident_count > 0.0
+
+====================================================================================================
+
+PROMPT 12:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 12:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	Input:
+		What is the average number of shooting incidents per million capita in the US?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'US'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		INSUFFICENT
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per million capita in California?
+	Output:
+		SELECT AVG(incidents) FROM shooting_incidents WHERE state = 'CA'
+	
+	Input:
+		What is the average number of shooting incidents per
+
+====================================================================================================
+
+PROMPT 13:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get victims killed per million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 13:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get victims killed per million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	Input:
+		What is the number of victims killed per million capita in the state of California?
+	Output:
+		SELECT victims_killed_per_million_capita FROM population_by_state WHERE state = 'California'
+
+"""
+
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write your code here
+# Write
+
+====================================================================================================
+

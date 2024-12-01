@@ -1,5 +1,5 @@
-import test.suites.case.sql_accuracy as suite
-from src.llm.falcon_11b import falcon_llm
+import test.suites.case.sql_context_accuracy as suite
+from src.llm.codegen_16b import codegen_llm
 
 import test
 
@@ -28,7 +28,7 @@ for path_name, path in vars(arguments).items():
 
 # Load model
 test.logging.info("LOADING MODEL")
-model: falcon_llm = falcon_llm()
+model: codegen_llm = codegen_llm()
 
 # Run test
 test.logging.info("STARTING TEST")

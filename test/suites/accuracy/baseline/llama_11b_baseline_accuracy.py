@@ -1,4 +1,4 @@
-import test.suites.case.sql_accuracy as suite
+import test.suites.case.sql_baseline_accuracy as suite
 from src.llm.llama_11b import llama_llm
 
 import test

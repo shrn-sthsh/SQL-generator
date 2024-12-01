@@ -1,0 +1,2464 @@
+PROMPT 1:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of mass shootings for each month in USA.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 1:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of mass shootings for each month in USA.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM us_shootings WHERE State = 'California' AND CityOrCountry = 'San Francisco'
+
+Expected Output:
+	[
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December'
+	]
+
+---
+
+### Task 2: Querying a database
+
+Prompt: 
+	Get the number of mass shootings in California for each month.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM us_shootings WHERE State = 'California'
+
+Expected Output:
+	[
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December'
+	]
+
+---
+
+### Task 3: Querying a database
+
+Prompt: 
+	Get the number of mass shootings in California for each month.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM us_shootings WHERE State = 'California'
+
+Expected Output:
+	[
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December'
+	]
+
+---
+
+### Task 4: Querying a database
+
+Prompt: 
+	Get the number of mass shootings in California for each month.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM us_shootings WHERE State = 'California'
+
+Expected Output:
+	[
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December'
+	]
+
+---
+
+### Task 5: Querying a database
+
+Prompt: 
+	Get the number of mass shootings in California for each month.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM us_shootings WHERE State = 'California'
+
+Expected Output:
+	[
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December'
+	]
+
+---
+
+### Task 6: Querying a database
+
+Prompt: 
+	Get the number of mass shootings in California for each month.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM us_shootings WHERE State = 'California'
+
+Expected Output:
+	[
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December'
+	]
+
+---
+
+### Task 7: Querying a database
+
+Prompt: 
+	Get the number of mass shootings in California for each month.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM us_shootings WHERE State = 'California'
+
+Expected Output:
+	[
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December'
+	]
+
+---
+
+### Task 8: Querying a database
+
+Prompt: 
+	Get the number of mass shootings in California for each month.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM us_shootings WHERE State = 'California'
+
+Expected Output:
+	[
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December'
+	]
+
+---
+
+### Task 9: Querying a database
+
+Prompt: 
+	Get the number of mass shootings in California for each month.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM us_shootings WHERE State = 'California'
+
+Expected Output:
+	[
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December'
+	]
+
+---
+
+### Task 10: Querying a database
+
+Prompt: 
+	Get the number of mass shootings in California for each month.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with '
+
+====================================================================================================
+
+PROMPT 2:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get total suspects arrested per million capita
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 2:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get total suspects arrested per million capita
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+```
+Prompt:
+	For each state, get total suspects arrested per million capita
+
+Schema:
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Example:
+
+```
+
+
+====================================================================================================
+
+PROMPT 3:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 3:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM experiencing_homelessness_age_demographics WHERE EXPERIENCING_HOMELESSNESS_CNT > 0 AND CALENDAR_YEAR = '2017' AND LOCATION = 'USA' AND AGE_GROUP_PUBLIC = 'Adult'
+
+Expected Output:
+	[
+		[
+			"2017",
+			"USA",
+			"Adult",
+			"1"
+		]
+	]
+
+Solution:
+	SELECT COUNT(*) FROM experiencing_homelessness_age_demographics WHERE EXPERIENCING_HOMELESSNESS_CNT > 0 AND CALENDAR_YEAR = '2017' AND LOCATION = 'USA' AND AGE_GROUP_PUBLIC = 'Adult'
+
+---
+
+## Exercise
+
+### Task 1
+
+Generate a SQL statement to find the number of homeless people in a given year.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM experiencing_homelessness_age_demographics WHERE EXPERIENCING_HOMELESSNESS_CNT > 0 AND CALENDAR_YEAR = '2017' AND LOCATION = 'USA' AND AGE_GROUP_PUBLIC = 'Adult'
+
+Expected Output:
+	[
+		[
+			"2017",
+			"USA",
+			"Adult",
+			"1"
+		]
+	]
+
+Solution:
+	SELECT COUNT(*) FROM experiencing_homelessness_age_demographics WHERE EXPERIENCING_HOMELESSNESS_CNT > 0 AND CALENDAR_YEAR = '2017' AND LOCATION = 'USA' AND AGE_GROUP_PUBLIC = 'Adult'
+
+---
+
+## Exercise
+
+### Task 1
+
+Generate a SQL statement to find the number of homeless people in a given year.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM experiencing_homelessness_age_demographics WHERE EXPERIENCING_HOMELESSNESS_CNT > 0 AND CALENDAR_YEAR = '2017' AND LOCATION = 'USA' AND AGE_GROUP_PUBLIC = 'Adult'
+
+Expected Output:
+	[
+		[
+			"2017",
+			"USA",
+			"Adult",
+			"1"
+		]
+	]
+
+Solution:
+	SELECT COUNT(*) FROM experiencing_homelessness_age_demographics WHERE EXPERIENCING_HOMELESSNESS_CNT > 0 AND CALENDAR_YEAR = '2017' AND LOCATION = 'USA' AND AGE_GROUP_PUBLIC = 'Adult'
+
+---
+
+## Exercise
+
+### Task 1
+
+Generate a SQL statement to find the number of homeless people in a given year.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM experiencing_homelessness_age_demographics WHERE EXPERIENCING_HOMELESSNESS_CNT > 0 AND CALENDAR_YEAR = '2017' AND LOCATION = 'USA' AND AGE_GROUP_PUBLIC = 'Adult'
+
+Expected Output:
+	[
+		[
+			"2017",
+			"USA",
+			"Adult",
+			"1"
+		]
+	]
+
+Solution:
+	SELECT COUNT(*) FROM experiencing_homelessness_age_demographics WHERE EXPERIENCING_HOMELESSNESS_CNT > 0 AND CALENDAR_YEAR = '2017' AND LOCATION = 'USA' AND AGE_GROUP_PUBLIC = 'Adult'
+
+---
+
+## Exercise
+
+### Task 1
+
+Generate a SQL statement to find the number of homeless people in a given year.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM experiencing_homelessness_age_demographics WHERE EXPERIENCING_HOMELESSNESS_CNT > 0 AND CALENDAR_YEAR = '2017' AND LOCATION = 'USA' AND AGE_GROUP_PUBLIC = 'Adult'
+
+Expected Output:
+	[
+		[
+			"2017",
+			"USA",
+			"Adult",
+			"1"
+		]
+	]
+
+Solution:
+	SELECT COUNT(*) FROM experiencing_homelessness_age_demographics WHERE EXPERIENCING_HOMELESSNESS_CNT > 0 AND CALENDAR_YEAR = '2017' AND LOCATION = 'USA' AND AGE_GROUP_PUBLIC = 'Adult'
+
+---
+
+## Exercise
+
+### Task 1
+
+Generate a SQL statement to find the number of homeless people in a given year.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM experiencing_homelessness_age_demographics WHERE EXPERIENCING_HOMELESSNESS_CNT > 0 AND CALENDAR_YEAR = '2017' AND LOCATION = 'USA' AND AGE_GROUP_PUBLIC = 'Adult'
+
+Expected Output:
+	[
+		[
+			"2017",
+			"USA",
+			"Adult",
+			"1"
+		]
+	]
+
+Solution:
+	SELECT COUNT(*) FROM experiencing_homelessness_age_demographics WHERE EXPERIENCING_HOMELESSNESS_CNT > 0 AND CALENDAR_YEAR = '2017' AND LOCATION = 'USA' AND AGE_GROUP_PUBLIC = 'Adult'
+
+---
+
+## Exercise
+
+### Task 1
+
+Generate a SQL statement to find the number of homeless people in a given year.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM experiencing_homelessness_age_demographics WHERE EXPERIENCING_HOMELESSNESS_CNT > 0 AND CALENDAR_YEAR = '2017' AND LOCATION = 'USA' AND AGE_GROUP_PUBLIC = 'Adult'
+
+Expected Output:
+	[
+		[
+			"2017",
+			"USA",
+
+====================================================================================================
+
+PROMPT 4:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita for each county of California.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 4:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita for each county of California.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT EXPERIENCING_HOMELESSNESS_CNT, COUNT(*) FROM EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS WHERE EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.LOCATION = 'CA' GROUP BY EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.EX
+
+====================================================================================================
+
+PROMPT 5:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita and US shooting incidents per million capita for each county of California.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+us_population_county (PopulationCount, County)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 5:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita and US shooting incidents per million capita for each county of California.
+
+Schema: 
+	experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+us_population_county (PopulationCount, County)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT EXPERIENCING_HOMELESSNESS_CNT, US_SHOOTINGS.INCIDENT_DATE, US_SHOOTINGS.STATE, US_SHOOTINGS.CITYORCOUNTRY, US_SHOOTINGS.VICTIMSKILLED, US_SHOOTINGS.VICTIMSINJURED, US_SHOOTINGS.SUSPECTSKILLED, US_SHOOTINGS.SUSPECTSINJURED, US_SHOOTINGS.SUSPECTSARRESTED
+	FROM EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS, US_POPULATION_COUNTY, US_SHOOTINGS
+	WHERE EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.LOCATION = US_POPULATION_COUNTY.COUNTY AND US_POPULATION_COUNTY.STATE = US_SHOOTINGS.STATE AND US_POPULATION_COUNTY.COUNTY = US_SHOOTINGS.CITYORCOUNTRY
+	ORDER BY EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS.CALENDAR_YEAR, US_SHOOTINGS.INCIDENT_DATE
+	LIMIT 10
+
+Expected Output:
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_POPULATION_COUNTY]
+	[US_SHOOTINGS]
+	[EXPERIENCING_HOMELESSNESS_AGE_DEMOGRAPHICS]
+	[US_P
+
+====================================================================================================
+
+PROMPT 6:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get shooting incidents per million capita, and income per million capita.
+
+Schema: 
+	food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+us_population_county (PopulationCount, County)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 6:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get shooting incidents per million capita, and income per million capita.
+
+Schema: 
+	food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+us_population_county (PopulationCount, County)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Input:
+	The first line of the input is the number of test cases, T.
+	The next T lines are test cases.
+
+Output:
+	For each test case, print the SQL statement(s) that would be used to answer the question.
+	The first line of each test case should be a single integer denoting the number of the test case.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next line should be a single integer denoting the number of the question.
+	The next line should be the question.
+	The next line should be a single integer denoting the number of the answer.
+	The next line should be the answer.
+	The next
+
+====================================================================================================
+
+PROMPT 7:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita, and income per million capita.
+
+Schema: 
+	food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 7:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita, and income per million capita.
+
+Schema: 
+	food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+
+Input:
+	food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Output:
+	SELECT State, IncidentCount, IncidentRate, IncidentRatePerc, IncidentRatePercPerc, IncidentRatePercPercPercPerc, IncidentRatePercPercPercPercPercPerc, IncidentRatePercPercPercPercPercPercPercPerc, IncidentRatePercPercPercPercPercPercPercPercPercPerc, IncidentRatePercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercPercP
+
+====================================================================================================
+
+PROMPT 8:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of suspects arrested each month over the years.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 8:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of suspects arrested each month over the years.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'
+
+Expected Output:
+	[
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(*) FROM us_shootings WHERE State = 'CA' AND CityOrCountry = 'San Francisco'",
+		"SELECT COUNT(
+
+====================================================================================================
+
+PROMPT 9:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of victims injured, suspects arrested and suspects killed for each incident.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 9:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of victims injured, suspects arrested and suspects killed for each incident.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1'
+
+Expected Output:
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+	1
+
+
+====================================================================================================
+
+PROMPT 10:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each month, get count of victims killed and average of victims killed in each shooting incident.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 10:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each month, get count of victims killed and average of victims killed in each shooting incident.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentDate = '1/1/2012'
+	SELECT AVG(VictimsKilled) FROM us_shootings WHERE IncidentDate = '1/1/2012'
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0
+	SELECT AVG(VictimsKilled) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0 AND VictimsKilled > 0
+	SELECT AVG(VictimsKilled) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0
+	SELECT AVG(VictimsKilled) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0
+	SELECT AVG(VictimsKilled) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0
+	SELECT AVG(VictimsKilled) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0
+	SELECT AVG(VictimsKilled) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0
+	SELECT AVG(VictimsKilled) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0
+	SELECT AVG(VictimsKilled) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0 AND VictimsKilled > 0
+	SELECT AVG(VictimsKilled) FROM us_shootings WHERE IncidentDate = '1/1/2012' AND VictimsKilled > 0 AND VictimsKilled > 0 AND Vict
+
+====================================================================================================
+
+PROMPT 11:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get victims killed per million capita, victims injured per million capita, suspects arrested per million capita, and incident counts for million capita.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 11:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get victims killed per million capita, victims injured per million capita, suspects arrested per million capita, and incident counts for million capita.
+
+Schema: 
+	us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT VictimsKilled, VictimsInjured, SuspectsKilled, SuspectsArrested, IncidentCount
+	FROM us_shootings
+	WHERE State = 'CA'
+	AND CityOrCountry = 'San Francisco'
+	AND IncidentDate >= '1/1/2015'
+	AND IncidentDate < '1/1/2016'
+	ORDER BY IncidentCount DESC
+	LIMIT 1
+
+Expected Output:
+	VictimsKilled, VictimsInjured, SuspectsKilled, SuspectsArrested, IncidentCount
+	1, 1, 1, 1, 1
+
+Solution:
+	SELECT VictimsKilled, VictimsInjured, SuspectsKilled, SuspectsArrested, IncidentCount
+	FROM us_shootings
+	WHERE State = 'CA'
+	AND CityOrCountry = 'San Francisco'
+	AND IncidentDate >= '1/1/2015'
+	AND IncidentDate < '1/1/2016'
+	ORDER BY IncidentCount DESC
+	LIMIT 1
+
+Explanation:
+	The query is asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2016.
+	The query is also asking for the most recent incident in San Francisco, California, for the year 2015.
+
+
+====================================================================================================
+
+PROMPT 12:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita.
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 12:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita.
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM us_population WHERE CensurYear = '1901' AND State = 'Wyoming'
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming'
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsKilled > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0
+	SELECT COUNT(*) FROM us_shootings WHERE IncidentID = '1' AND State = 'Wyoming' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0 AND Suspect
+
+====================================================================================================
+
+PROMPT 13:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get victims killed per million capita.
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 13:
+
+Given the schema of the relavent database(s), generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get victims killed per million capita.
+
+Schema: 
+	us_population (CensurYear, State, PopulationCount)
+us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM us_shootings WHERE State = 'California' AND VictimsKilled > 0.0 AND VictimsKilled < 1.0;
+
+Expected Output:
+	1
+
+Input:
+	[
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	{
+	"State": "California",
+	"VictimsKilled": "0.0"
+	},
+	
+
+====================================================================================================
+
