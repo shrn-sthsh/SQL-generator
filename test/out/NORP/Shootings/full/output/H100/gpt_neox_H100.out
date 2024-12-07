@@ -1,0 +1,1528 @@
+PROMPT 1:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of mass shootings for each month in USA.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 1:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of mass shootings for each month in USA.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+SQL Statement:
+	SELECT COUNT(*) AS count, MONTH(IncidentDate) AS month, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested FROM us_shootings WHERE IncidentDate >= '01/01/2012' AND IncidentDate <= '01/01/2013' AND State = 'CA' AND CityOrCountry = 'San Francisco' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0
+
+Response:
+	INSUFFICENT
+
+SQL Statement:
+	SELECT COUNT(*) AS count, MONTH(IncidentDate) AS month, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested FROM us_shootings WHERE IncidentDate >= '01/01/2012' AND IncidentDate <= '01/01/2013' AND State = 'CA' AND CityOrCountry = 'San Francisco' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0
+
+Response:
+	INSUFFICENT
+
+SQL Statement:
+	SELECT COUNT(*) AS count, MONTH(IncidentDate) AS month, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested FROM us_shootings WHERE IncidentDate >= '01/01/2012' AND IncidentDate <= '01/01/2013' AND State = 'CA' AND CityOrCountry = 'San Francisco' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0
+
+Response:
+	INSUFFICENT
+
+SQL Statement:
+	SELECT COUNT(*) AS count, MONTH(IncidentDate) AS month, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested FROM us_shootings WHERE IncidentDate >= '01/01/2012' AND IncidentDate <= '01/01/2013' AND State = 'CA' AND CityOrCountry = 'San Francisco' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0
+
+Response:
+	INSUFFICENT
+
+SQL Statement:
+	SELECT COUNT(*) AS count, MONTH(IncidentDate) AS month, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested FROM us_shootings WHERE IncidentDate >= '01/01/2012' AND IncidentDate <= '01/01/2013' AND State = 'CA' AND CityOrCountry = 'San Francisco' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0
+
+Response:
+	INSUFFICENT
+
+SQL Statement:
+	SELECT COUNT(*) AS count, MONTH(IncidentDate) AS month, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested FROM us_shootings WHERE IncidentDate >= '01/01/2012' AND IncidentDate <= '01/01/2013' AND State = 'CA' AND CityOrCountry = 'San Francisco' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0
+
+Response:
+	INSUFFICENT
+
+SQL Statement:
+	SELECT COUNT(*) AS count, MONTH(IncidentDate) AS month, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested FROM us_shootings WHERE IncidentDate >= '01/01/2012' AND IncidentDate <= '01/01/2013' AND State = 'CA' AND CityOrCountry = 'San Francisco' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0
+
+Response:
+	INSUFFICENT
+
+SQL Statement:
+	SELECT COUNT(*) AS count, MONTH(IncidentDate) AS month, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested FROM us_shootings WHERE IncidentDate >= '01/01/2012' AND IncidentDate <= '01/01/2013' AND State = 'CA' AND CityOrCountry = 'San Francisco' AND VictimsKilled > 0 AND VictimsInjured > 0 AND SuspectsInjured > 0 AND SuspectsKilled > 0 AND SuspectsArrested > 0
+
+Response:
+	INSUFFICENT
+
+SQL Statement:
+	SELECT COUNT(*) AS count, MONTH(IncidentDate) AS month, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested FROM us_shootings WHERE IncidentDate >= '01/01/2012' AND IncidentDate <= '01/01/2013' AND State = 'CA' AND CityOrCountry = 'San Francisco' AND VictimsKilled > 0 AND VictimsIn
+
+====================================================================================================
+
+PROMPT 2:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get total suspects arrested per million capita
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 2:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get total suspects arrested per million capita
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+SQL Statement:
+	SELECT SUM(SuspectsArrested) AS SuspectsArrested, State, PopulationCount, (SuspectsArrested / PopulationCount) AS SuspectsArrested_per_Million_Census_Tract
+	FROM us_shootings
+	WHERE State = 'CA'
+	GROUP BY State, PopulationCount
+	ORDER BY State, PopulationCount
+
+Expected Results:
+	SuspectsArrested_per_Million_Census_Tract	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1,748,917	0.00
+	CA	1
+
+====================================================================================================
+
+PROMPT 3:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 3:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Response:
+	SELECT us_population.CensurYear, us_population.State, us_population.PopulationCount, us_shootings.IncidentID, us_shootings.Address, us_shootings.IncidentDate, us_shootings.State, us_shootings.CityOrCountry, us_shootings.VictimsKilled, us_shootings.VictimsInjured, us_shootings.SuspectsInjured, us_shootings.SuspectsKilled, us_shootings.SuspectsArrested, us_population_county.County, us_population_county.Pop2010, us_population_county.Ohu2010, us_population_county.LILATracts_1And10, us_population_county.LILATracts_halfAnd10, us_population_county.LILATracks_1And20, us_population_county.LILATracts_Vehicle, us_population_county.HUNVFlag, us_population_county.LowIncomeTracts, us_population_county.PovertyRate, us_population_county.MedianFamilyIncome, us_population_county.LA1and10, us_population_county.LAhalfand10, us_population_county.LA1and20, us_population_county.LATracts_half, us_population_county.LATracts1, us_population_county.LATracts10, us_population_county.LATracts20, us_population_county.LATractsVehicle_20, us_population_county.LAPOP1_10, us_population_county.LAPOP05_10, us_population_county.LAPOP1_20, us_population_county.LALOWI1_10, us_population_county.LALOWI05_10, us_population_county.LALOWI1_20, us_population_county.lapophalf, us_population_county.lalowihalf, us_population_county.lakidshalf, us_population_county.laseniorshalf, us_population_county.lawhitehalf, us_population_county.lablackhalf, us_population_county.laasianhalf, us_population_county.lanhopihalf, us_population_county.laaianhalf, us_population_county.laomultirhalf, us_population_county.lahisphalf, us_population_county.lahunvhalf, us_population_county.lasnaphalf, us_population_county.lapop1, us_population_county.lalowi1, us_population_county.lakids1, us_population_county.laseniors1, us_population_county.lawhite1, us_population_county.lablack1, us_population_county.laasian1, us_population_county.lanhopi1, us_population_county.laaian1, us_population_county.laomultir1, us_population_county.lahisp1, us_population_county.lahunv1, us_population_county.lasnap1, us_population_county.lapop10, us_population_county.lalowi10, us_population_county.lakids10, us_population_county.laseniors10, us_population_county.lawhite10, us_population_county.lablack10, us_population_county.laasian10, us_population_county.lanhopi10, us_population_county.laaian10, us_population_county.laomultir10, us_population_county.lahisp10, us_population_county.lahunv10, us_population_county.lasnap10, us_population_county.TractLOWI, us_population_county.TractKids, us_population_county.TractSeniors, us_population_county.TractWhite, us_population_county.TractBlack, us_population_county.TractAsian, us_population_county.TractNHOPI, us_population_county.TractAIAN, us_population_county.TractOMultir, us_population_county.TractHispanic, us_population_county.TractHUNV, us_population_county.TractSNAP, us_population_county.County, us_population_county.Pop2010, us_population_county.Ohu2010, us_population_county.LILATracts_1And10, us_population_county.LILATracts_halfAnd10, us_population_county.LILATracks_1And20, us_population_county.LILATracts_Vehicle, us_population_county.HUNVFlag, us_population_county.LowIncomeTracts, us_population_county.PovertyRate, us_population_county.MedianFamilyIncome, us_population_county.LA1and10, us_population_county.LAhalfand10, us_population_county.LA1and20, us_population_county.LATracts_half, us_population_county.LATracts1, us_population_county.LATracts10, us_population_county.LATracts20, us_population_county.LATractsVehicle_20, us_population_county.LAPOP1_10, us_population_county.LAPOP
+
+====================================================================================================
+
+PROMPT 4:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita for each county of California.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 4:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita for each county of California.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Hint:
+	Use the following SQL statement to get the homeless population per capita for each county of California.
+	SELECT PopulationCount, County, SUM(PopulationCount) / SUM(COUNT(*) OVER (PARTITION BY County)) AS PopulationPerCapita
+	FROM us_population
+	GROUP BY PopulationCount, County
+	ORDER BY PopulationPerCapita DESC
+	LIMIT 10
+
+Response:
+	SELECT PopulationCount, County, SUM(PopulationCount) / SUM(COUNT(*) OVER (PARTITION BY County)) AS PopulationPerCapita
+	FROM us_population
+	GROUP BY PopulationCount, County
+	ORDER BY PopulationPerCapita DESC
+	LIMIT 10
+
+# 3.2.2.2.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.
+
+====================================================================================================
+
+PROMPT 5:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita and US shooting incidents per million capita for each county of California.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 5:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita and US shooting incidents per million capita for each county of California.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+SQL Statement:
+	SELECT COUNT(*) AS PopulationCount, COUNT(*) AS IncidentCount, COUNT(*) AS IncidentCount2, COUNT(*) AS IncidentCount3, COUNT(*) AS IncidentCount4, COUNT(*) AS IncidentCount5, COUNT(*) AS IncidentCount6, COUNT(*) AS IncidentCount7, COUNT(*) AS IncidentCount8, COUNT(*) AS IncidentCount9, COUNT(*) AS IncidentCount10, COUNT(*) AS IncidentCount11, COUNT(*) AS IncidentCount12, COUNT(*) AS IncidentCount13, COUNT(*) AS IncidentCount14, COUNT(*) AS IncidentCount15, COUNT(*) AS IncidentCount16, COUNT(*) AS IncidentCount17, COUNT(*) AS IncidentCount18, COUNT(*) AS IncidentCount19, COUNT(*) AS IncidentCount20, COUNT(*) AS IncidentCount21, COUNT(*) AS IncidentCount22, COUNT(*) AS IncidentCount23, COUNT(*) AS IncidentCount24, COUNT(*) AS IncidentCount25, COUNT(*) AS IncidentCount26, COUNT(*) AS IncidentCount27, COUNT(*) AS IncidentCount28, COUNT(*) AS IncidentCount29, COUNT(*) AS IncidentCount30, COUNT(*) AS IncidentCount31, COUNT(*) AS IncidentCount32, COUNT(*) AS IncidentCount33, COUNT(*) AS IncidentCount34, COUNT(*) AS IncidentCount35, COUNT(*) AS IncidentCount36, COUNT(*) AS IncidentCount37, COUNT(*) AS IncidentCount38, COUNT(*) AS IncidentCount39, COUNT(*) AS IncidentCount40, COUNT(*) AS IncidentCount41, COUNT(*) AS IncidentCount42, COUNT(*) AS IncidentCount43, COUNT(*) AS IncidentCount44, COUNT(*) AS IncidentCount45, COUNT(*) AS IncidentCount46, COUNT(*) AS IncidentCount47, COUNT(*) AS IncidentCount48, COUNT(*) AS IncidentCount49, COUNT(*) AS IncidentCount50, COUNT(*) AS IncidentCount51, COUNT(*) AS IncidentCount52, COUNT(*) AS IncidentCount53, COUNT(*) AS IncidentCount54, COUNT(*) AS IncidentCount55, COUNT(*) AS IncidentCount56, COUNT(*) AS IncidentCount57, COUNT(*) AS IncidentCount58, COUNT(*) AS IncidentCount59, COUNT(*) AS IncidentCount60, COUNT(*) AS IncidentCount61, COUNT(*) AS IncidentCount62, COUNT(*) AS IncidentCount63, COUNT(*) AS IncidentCount64, COUNT(*) AS IncidentCount65, COUNT(*) AS IncidentCount66, COUNT(*) AS IncidentCount67, COUNT(*) AS IncidentCount68, COUNT(*) AS IncidentCount69, COUNT(*) AS IncidentCount70, COUNT(*) AS IncidentCount71, COUNT(*) AS IncidentCount72, COUNT(*) AS IncidentCount73, COUNT(*) AS IncidentCount74, COUNT(*) AS IncidentCount75, COUNT(*) AS IncidentCount76, COUNT(*) AS IncidentCount77, COUNT(*) AS IncidentCount78, COUNT(*) AS IncidentCount79, COUNT(*) AS IncidentCount80, COUNT(*) AS IncidentCount81, COUNT(*) AS IncidentCount82, COUNT(*) AS IncidentCount83, COUNT(*) AS IncidentCount84, COUNT(*) AS IncidentCount85, COUNT(*) AS IncidentCount86, COUNT(*) AS IncidentCount87, COUNT(*) AS IncidentCount88, COUNT(*) AS IncidentCount89, COUNT(*) AS IncidentCount90, COUNT(*) AS IncidentCount91, COUNT(*) AS IncidentCount92, COUNT(*) AS IncidentCount93, COUNT(*) AS IncidentCount94, COUNT(*) AS IncidentCount95, COUNT(*) AS IncidentCount96, COUNT(*) AS IncidentCount97, COUNT(*) AS IncidentCount98, COUNT(*) AS IncidentCount99, COUNT(*) AS IncidentCount100, COUNT(*) AS IncidentCount101, COUNT(*) AS IncidentCount102, COUNT(*) AS IncidentCount103, COUNT(*) AS IncidentCount104, COUNT(*) AS IncidentCount105, COUNT(*) AS IncidentCount106, COUNT(*) AS IncidentCount107, COUNT(*) AS IncidentCount108, COUNT(*) AS IncidentCount109, COUNT(*) AS IncidentCount110, COUNT(*) AS IncidentCount111, COUNT(*) AS IncidentCount112, COUNT(*) AS IncidentCount113, COUNT(*) AS IncidentCount114, COUNT(*) AS IncidentCount115, COUNT(*) AS IncidentCount116, COUNT(*) AS IncidentCount117, COUNT(*) AS IncidentCount118, COUNT(*) AS IncidentCount119, COUNT(*) AS IncidentCount120, COUNT(*) AS IncidentCount121, COUNT(*) AS IncidentCount122, COUNT(*) AS IncidentCount123, COUNT(*) AS IncidentCount124, COUNT(*) AS IncidentCount125, COUNT(*) AS IncidentCount126, COUNT(*) AS IncidentCount127, COUNT(*) AS IncidentCount128, COUNT(*) AS IncidentCount129, COUNT(*) AS IncidentCount130, COUNT(*) AS IncidentCount131, COUNT(*) AS IncidentCount132, COUNT(*) AS IncidentCount133, COUNT(*) AS IncidentCount134, COUNT(*) AS IncidentCount135, COUNT(*) AS IncidentCount136, COUNT(*) AS IncidentCount137, COUNT(*) AS IncidentCount138, COUNT(*) AS IncidentCount139, COUNT(*) AS IncidentCount140, COUNT(*) AS IncidentCount141, COUNT(*) AS IncidentCount142, COUNT(*) AS IncidentCount143, COUNT(*) AS IncidentCount144, COUNT(*) AS IncidentCount145, COUNT(*) AS IncidentCount146, COUNT(*) AS IncidentCount147, COUNT(*) AS IncidentCount148, COUNT(*) AS IncidentCount149, COUNT
+
+====================================================================================================
+
+PROMPT 6:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get shooting incidents per million capita, and income per million capita.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 6:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get shooting incidents per million capita, and income per million capita.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+SQL Statement:
+	SELECT COUNT(*) AS PopulationCount, County, State, PopulationCount/COUNT(*) AS PopulationPerMillion, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+	FROM (
+		SELECT COUNT(*) AS PopulationCount, County, State, PopulationCount/COUNT(*) AS PopulationPerMillion, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+		FROM (
+			SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+			FROM (
+				SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+				FROM (
+					SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+					FROM (
+						SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+						FROM (
+							SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+							FROM (
+								SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+								FROM (
+									SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+									FROM (
+										SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+										FROM (
+											SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+											FROM (
+												SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+												FROM (
+													SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+													FROM (
+														SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+														FROM (
+															SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+															FROM (
+																SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+																FROM (
+																	SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+																	FROM (
+																		SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+																		FROM (
+																			SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+																			FROM (
+																				SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+																				FROM (
+																					SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+																					FROM (
+																						SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+																						FROM (
+																							SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+																							FROM (
+																								SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+																								FROM (
+																									SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+																									FROM (
+																										SELECT COUNT(*) AS PopulationCount, County, State, COUNT(*) AS Incidents, COUNT(*) AS IncidentsPerMillion, COUNT(*) AS Income, COUNT(*) AS IncomePerMillion
+																										
+
+====================================================================================================
+
+PROMPT 7:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita, and income per million capita.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 7:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita, and income per million capita.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+SQL Statement:
+	SELECT
+		SUM(IncidentsPerMillion) AS IncidentsPerMillion,
+		SUM(IncomePerMillion) AS IncomePerMillion,
+		SUM(IncidentsPerMillion) / SUM(IncomePerMillion) AS IncidentsPerMillion_PerMillion
+	FROM
+		(SELECT
+			SUM(VictimsKilled) AS IncidentsPerMillion,
+			SUM(VictimsInjured) AS IncomePerMillion
+		FROM
+			us_shootings
+		WHERE
+			State = 'CA'
+		GROUP BY
+			State) AS CA_Shootings
+	GROUP BY
+		State
+	ORDER BY
+		IncidentsPerMillion_PerMillion DESC
+
+Response:
+	+---------------+---------------+------------------+
+	| IncidentsPerM | IncomePerM | IncidentsPerMillion_PerMillion |
+	+---------------+---------------+------------------+
+	|            0.0 |          0.0 |                  0.0 |
+	+---------------+---------------+------------------+
+	1 row in set (0.00 sec)
+
+Query II:
+	SELECT
+		SUM(IncidentsPerMillion) AS IncidentsPerMillion,
+		SUM(IncomePerMillion) AS IncomePerMillion,
+		SUM(IncidentsPerMillion) / SUM(IncomePerMillion) AS IncidentsPerMillion_PerMillion
+	FROM
+		(SELECT
+			SUM(VictimsKilled) AS IncidentsPerMillion,
+			SUM(VictimsInjured) AS IncomePerMillion
+		FROM
+			us_shootings
+		WHERE
+			State = 'CA'
+		GROUP BY
+			State) AS CA_Shootings
+	GROUP BY
+		State
+	ORDER BY
+		IncidentsPerMillion_PerMillion DESC
+
+Response:
+	+---------------+---------------+------------------+
+	| IncidentsPerM | IncomePerM | IncidentsPerMillion_PerMillion |
+	+---------------+---------------+------------------+
+	|            0.0 |          0.0 |                  0.0 |
+	+---------------+---------------+------------------+
+	1 row in set (0.00 sec)
+
+Query III:
+	SELECT
+		SUM(IncidentsPerMillion) AS IncidentsPerMillion,
+		SUM(IncomePerMillion) AS IncomePerMillion,
+		SUM(IncidentsPerMillion) / SUM(IncomePerMillion) AS IncidentsPerMillion_PerMillion
+	FROM
+		(SELECT
+			SUM(VictimsKilled) AS IncidentsPerMillion,
+			SUM(VictimsInjured) AS IncomePerMillion
+		FROM
+			us_shootings
+		WHERE
+			State = 'CA'
+		GROUP BY
+			State) AS CA_Shootings
+	GROUP BY
+		State
+	ORDER BY
+		IncidentsPerMillion_PerMillion DESC
+
+Response:
+	+---------------+---------------+------------------+
+	| IncidentsPerM | IncomePerM | IncidentsPerMillion_PerMillion |
+	+---------------+---------------+------------------+
+	|            0.0 |          0.0 |                  0.0 |
+	+---------------+---------------+------------------+
+	1 row in set (0.00 sec)
+
+Query IV:
+	SELECT
+		SUM(IncidentsPerMillion) AS IncidentsPerMillion,
+		SUM(IncomePerMillion) AS IncomePerMillion,
+		SUM(IncidentsPerMillion) / SUM(IncomePerMillion) AS IncidentsPerMillion_PerMillion
+	FROM
+		(SELECT
+			SUM(VictimsKilled) AS IncidentsPerMillion,
+			SUM(VictimsInjured) AS IncomePerMillion
+		FROM
+			us_shootings
+		WHERE
+			State = 'CA'
+		GROUP BY
+			State) AS CA_Shootings
+	GROUP BY
+		State
+	ORDER BY
+		IncidentsPerMillion_PerMillion DESC
+
+Response:
+	+---------------+---------------+------------------+
+	| IncidentsPerM | IncomePerM | IncidentsPerMillion_PerMillion |
+	+---------------+---------------+------------------+
+	|            0.0 |          0.0 |                  0.0 |
+	+---------------+---------------+------------------+
+	1 row in set (0.00 sec)
+
+Query V:
+	SELECT
+		SUM(IncidentsPerMillion) AS IncidentsPerMillion,
+		SUM(IncomePerMillion) AS IncomePerMillion,
+		SUM(IncidentsPerMillion) / SUM(IncomePerMillion) AS IncidentsPerMillion_PerMillion
+	FROM
+		(SELECT
+			SUM(VictimsKilled) AS IncidentsPerMillion,
+			SUM(VictimsInjured) AS IncomePerMillion
+		FROM
+			us_shootings
+		WHERE
+			State = 'CA'
+		GROUP BY
+			State) AS CA_Shootings
+	GROUP BY
+		State
+	ORDER BY
+		IncidentsPerMillion_PerMillion DESC
+
+Response:
+	+---------------+---------------+------------------+
+	| IncidentsPerM | IncomePerM | IncidentsPerMillion_PerMillion |
+	+---------------+---------------+------------------+
+	|            0.0 |          0.0 |                  0.0 |
+	+---------------+---------------+------------------+
+	1 row in set (0.00 sec)
+
+Query VI:
+	SELECT
+		SUM(IncidentsPerMillion) AS IncidentsPerMillion,
+		SUM(IncomePerMillion) AS IncomePerMillion,
+		SUM(IncidentsPerMillion) / SUM(IncomePerMillion) AS IncidentsPerMillion_PerMillion
+	FROM
+		(SELECT
+			SUM(VictimsKilled) AS IncidentsPerMillion,
+			SUM(VictimsInjured) AS Income
+
+====================================================================================================
+
+PROMPT 8:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of suspects arrested each month over the years.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 8:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of suspects arrested each month over the years.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+SQL Statement:
+	SELECT COUNT(*)
+		FROM us_shootings
+		WHERE IncidentDate >= '01/01/2010'
+			AND IncidentDate < '01/01/2011'
+			AND State = 'CA'
+			AND VictimsKilled > 0
+			AND SuspectsKilled > 0
+			AND SuspectsArrested > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM us_population
+		WHERE CensurYear = '2010'
+			AND State = 'CA'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE CensusTract = '01'
+			AND State = 'CA'
+			AND County = 'Los Angeles'
+			AND Urban = 'Y'
+			AND Pop2010 > 0
+
+Response:
+	SELECT COUNT(*)
+		FROM food_access
+		WHERE
+
+====================================================================================================
+
+PROMPT 9:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of victims injured, suspects arrested and suspects killed for each incident.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 9:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of victims injured, suspects arrested and suspects killed for each incident.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the following order:
+	us_population
+	us_shootings
+	food_access
+	experiencing_homelessness_age_demographics
+	us_population_county
+
+Note, the data is in the
+
+====================================================================================================
+
+PROMPT 10:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each month, get count of victims killed and average of victims killed in each shooting incident.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 10:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each month, get count of victims killed and average of victims killed in each shooting incident.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+SQL Statement:
+	SELECT COUNT(*) AS "VictimsKilled", AVG(VictimsKilled) AS "AverageVictimsKilled"
+	FROM us_shootings
+	WHERE (CensusTract = 'TractKids' OR CensusTract = 'TractSeniors')
+	AND (IncidentDate BETWEEN '01-01-2012' AND '12-31-2012')
+	GROUP BY CensusTract, IncidentDate
+	ORDER BY CensusTract, IncidentDate
+
+Response:
+	VictimsKilled	AverageVictimsKilled
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFFICENT
+	INSUFFICENT	INSUFF
+
+====================================================================================================
+
+PROMPT 11:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get victims killed per million capita, victims injured per million capita, suspects arrested per million capita, and incident counts for million capita.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 11:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get victims killed per million capita, victims injured per million capita, suspects arrested per million capita, and incident counts for million capita.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Note, the data is in the following format:
+
+```
+US_SHOOTINGS
+IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested
+1, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+2, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+3, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+4, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+5, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+6, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+7, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+8, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+9, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+10, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+11, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+12, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+13, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+14, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+15, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+16, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+17, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+18, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+19, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+20, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+21, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+22, "123 Main St, Anytown, CA, 12345, 1, 1, 1, 1, 1", "01/01/2015", "CA", "Anytown", "1", "1", "1", "1", "1"
+23, "123 Main St, Anytown, CA, 12345, 1, 1,
+
+====================================================================================================
+
+PROMPT 12:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 12:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+SQL Statement:
+	SELECT COUNT(*) AS "PopulationCount", COUNT(*) / 1000000 AS "IncidentsPerMillion"
+	FROM us_shootings
+	WHERE State = 'CA'
+	GROUP BY State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested
+	ORDER BY IncidentsPerMillion DESC
+	LIMIT 10
+
+Expected Results:
+	| PopulationCount | IncidentsPerMillion |
+	|-------------------|---------------------|
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |                   1 |
+	|               10 |
+
+====================================================================================================
+
+PROMPT 13:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get victims killed per million capita.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 13:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get victims killed per million capita.
+
+All Schema: 
+	    us_population (CensurYear, State, PopulationCount)
+	    us_shootings (IncidentID, Address, IncidentDate, State, CityOrCountry, VictimsKilled, VictimsInjured, SuspectsInjured, SuspectsKilled, SuspectsArrested)
+	    food_access (CensusTract, State, County, Urban, Pop2010, Ohu2010, LILATracts_1And10, LILATracts_halfAnd10, LILATracks_1And20, LILATracts Vehicle, HUNVFlag, LowIncomeTracts, PovertyRate, MedianFamilyIncome, LA1and10, LAhalfand10, LA1and20, LATracts_half, LATracts1, LATracts10, LATracts20, LATractsVehicle_20, LAPOP1_10, LAPOP05_10, LAPOP1_20, LALOWI1_10, LALOWI05_10, LALOWI1_20, lapophalf, lalowihalf, lakidshalf, laseniorshalf, lawhitehalf, lablackhalf, laasianhalf, lanhopihalf, laaianhalf, laomultirhalf, lahisphalf, lahunvhalf, lasnaphalf, lapop1, lalowi1, lakids1, laseniors1, lawhite1, lablack1, laasian1, lanhopi1, laaian1, laomultir1, lahisp1, lahunv1, lasnap1, lapop10, lalowi10, lakids10, laseniors10, lawhite10, lablack10, laasian10, lanhopi10, laaian10, laomultir10, lahisp10, lahunv10, lasnap10, lapop20, lalowi20, lakids20, laseniors20, lawhite20, lablack20, laasian20, lanhopi20, laaian20, laomultir20, lahisp20, lahunv20, lasnap20, TractLOWI, TractKids, TractSeniors, TractWhite, TractBlack, TractAsian, TractNHOPI, TractAIAN, TractOMultir, TractHispanic, TractHUNV, TractSNAP)
+	    experiencing_homelessness_age_demographics (CALENDAR_YEAR, LOCATION, AGE_GROUP_PUBLIC, EXPERIENCING_HOMELESSNESS_CNT)
+	    us_population_county (PopulationCount, County)
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Response:
+	SELECT COUNT(*) AS victims_killed_per_million_per_state, state, population_count, state_abbreviation, state_name, state_population_density, state_population_density_rank, state_population_density_rank_desc, state_population_density_rank_desc_rank, state_population_density_rank_desc_rank_desc, state_population_density_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc, state_population_density_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank_desc_rank, state_population_density_rank
+
+====================================================================================================
+

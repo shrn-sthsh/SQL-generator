@@ -1,0 +1,3091 @@
+PROMPT 1:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of mass shootings for each month in USA.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 1:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of mass shootings for each month in USA.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ? AND minute = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ? AND minute = ? AND second = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ? AND minute = ? AND second = ? AND millisecond = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ? AND minute = ? AND second = ? AND millisecond = ? AND microsecond = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ? AND minute = ? AND second = ? AND millisecond = ? AND microsecond = ? AND nanosecond = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ? AND minute = ? AND second = ? AND millisecond = ? AND microsecond = ? AND nanosecond = ? AND microsecond_frac = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ? AND minute = ? AND second = ? AND millisecond = ? AND microsecond = ? AND nanosecond = ? AND microsecond_frac = ? AND nanosecond_frac = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ? AND minute = ? AND second = ? AND millisecond = ? AND microsecond = ? AND nanosecond = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ? AND minute = ? AND second = ? AND millisecond = ? AND microsecond = ? AND nanosecond = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ? AND minute = ? AND second = ? AND millisecond = ? AND microsecond = ? AND nanosecond = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ? AND minute = ? AND second = ? AND millisecond = ? AND microsecond = ? AND nanosecond = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ? AND minute = ? AND second = ? AND millisecond = ? AND microsecond = ? AND nanosecond = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ? AND minute = ? AND second = ? AND millisecond = ? AND microsecond = ? AND nanosecond = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ? AND minute = ? AND second = ? AND millisecond = ? AND microsecond = ? AND nanosecond = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ? AND minute = ? AND second = ? AND millisecond = ? AND microsecond = ? AND nanosecond = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ?;
+```
+
+```sql
+SELECT COUNT(*) FROM mass_shootings WHERE month = ? AND year = ? AND day = ? AND hour = ? AND minute = ? AND second = ? AND millisecond = ? AND microsecond = ? AND nanosecond = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND millisecond_frac = ? AND microsecond_frac = ? AND nanosecond_frac = ? AND mill
+
+====================================================================================================
+
+PROMPT 2:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get total suspects arrested per million capita
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 2:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get total suspects arrested per million capita
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Response:
+	INSUFFICENT
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response:
+	SELECT COUNT(*) FROM arrest WHERE state = 'CA'
+
+Expected Response
+
+====================================================================================================
+
+PROMPT 3:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 3:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of homeless population and US shooting incidents for each year.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Output:
+	SQL statement:
+	SELECT count(*) as count, year(date) as year
+	FROM homeless_population
+	WHERE year(date) = ?
+	AND country = ?
+	GROUP BY year(date)
+	ORDER BY year(date)
+	INSUFFICENT
+
+Input:
+	year(date)
+	country
+
+Output:
+	SQL statement:
+	SELECT count(*) as count, year(date) as year
+	FROM homeless_population
+	WHERE year(date) = ?
+	AND country = ?
+	GROUP BY year(date)
+	ORDER BY year(date)
+	INSUFFICENT
+
+Input:
+	year(date)
+	country
+	state
+
+Output:
+	SQL statement:
+	SELECT count(*) as count, year(date) as year
+	FROM homeless_population
+	WHERE year(date) = ?
+	AND country = ?
+	AND state = ?
+	GROUP BY year(date)
+	ORDER BY year(date)
+	INSUFFICENT
+
+Input:
+	year(date)
+	country
+	state
+	city
+
+Output:
+	SQL statement:
+	SELECT count(*) as count, year(date) as year
+	FROM homeless_population
+	WHERE year(date) = ?
+	AND country = ?
+	AND state = ?
+	AND city = ?
+	GROUP BY year(date)
+	ORDER BY year(date)
+	INSUFFICENT
+
+Input:
+	year(date)
+	country
+	state
+	city
+	street
+
+Output:
+	SQL statement:
+	SELECT count(*) as count, year(date) as year
+	FROM homeless_population
+	WHERE year(date) = ?
+	AND country = ?
+	AND state = ?
+	AND city = ?
+	AND street = ?
+	GROUP BY year(date)
+	ORDER BY year(date)
+	INSUFFICENT
+
+Input:
+	year(date)
+	country
+	state
+	city
+	street
+	building
+
+Output:
+	SQL statement:
+	SELECT count(*) as count, year(date) as year
+	FROM homeless_population
+	WHERE year(date) = ?
+	AND country = ?
+	AND state = ?
+	AND city = ?
+	AND street = ?
+	AND building = ?
+	GROUP BY year(date)
+	ORDER BY year(date)
+	INSUFFICENT
+
+Input:
+	year(date)
+	country
+	state
+	city
+	street
+	building
+	room
+
+Output:
+	SQL statement:
+	SELECT count(*) as count, year(date) as year
+	FROM homeless_population
+	WHERE year(date) = ?
+	AND country = ?
+	AND state = ?
+	AND city = ?
+	AND street = ?
+	AND building = ?
+	AND room = ?
+	GROUP BY year(date)
+	ORDER BY year(date)
+	INSUFFICENT
+
+Input:
+	year(date)
+	country
+	state
+	city
+	street
+	building
+	room
+	bed
+
+Output:
+	SQL statement:
+	SELECT count(*) as count, year(date) as year
+	FROM homeless_population
+	WHERE year(date) = ?
+	AND country = ?
+	AND state = ?
+	AND city = ?
+	AND street = ?
+	AND building = ?
+	AND room = ?
+	AND bed = ?
+	GROUP BY year(date)
+	ORDER BY year(date)
+	INSUFFICENT
+
+Input:
+	year(date)
+	country
+	state
+	city
+	street
+	building
+	room
+	bed
+	person
+
+Output:
+	SQL statement:
+	SELECT count(*) as count, year(date) as year
+	FROM homeless_population
+	WHERE year(date) = ?
+	AND country = ?
+	AND state = ?
+	AND city = ?
+	AND street = ?
+	AND building = ?
+	AND room = ?
+	AND bed = ?
+	AND person = ?
+	GROUP BY year(date)
+	ORDER BY year(date)
+	INSUFFICENT
+
+Input:
+	year(date)
+	country
+	state
+	city
+	street
+	building
+	room
+	bed
+	person
+	age
+
+Output:
+	SQL statement:
+	SELECT count(*) as count, year(date) as year
+	FROM homeless_population
+	WHERE year(date) = ?
+	AND country = ?
+	AND state = ?
+	AND city = ?
+	AND street = ?
+	AND building = ?
+	AND room = ?
+	AND bed = ?
+	AND person = ?
+	AND age = ?
+	GROUP BY year(date)
+	ORDER BY year(date)
+	INSUFFICENT
+
+Input:
+	year(date)
+	country
+	state
+	city
+	street
+	building
+	room
+	bed
+	person
+	age
+	gender
+
+Output:
+	SQL statement:
+	SELECT count(*) as count, year(date) as year
+	FROM homeless_population
+	WHERE year(date) = ?
+	AND country = ?
+	AND state = ?
+	AND city = ?
+	AND street = ?
+	AND building = ?
+	AND room = ?
+	AND bed = ?
+	AND person = ?
+	AND age = ?
+	AND gender = ?
+	GROUP BY year(date)
+	ORDER BY year(date)
+	INSUFFICENT
+
+Input:
+	year(date)
+	country
+	state
+	city
+	street
+	building
+	room
+	bed
+	person
+	age
+	gender
+	race
+
+Output:
+	SQL statement:
+	SELECT count(*) as count, year(date) as year
+	FROM homeless_population
+	WHERE year(date) = ?
+	AND country = ?
+	AND state = ?
+	AND city = ?
+	AND street = ?
+	AND building = ?
+	AND room = ?
+	AND bed = ?
+	AND person = ?
+	AND age = ?
+	AND gender = ?
+	AND race = ?
+	GROUP BY year(date)
+	ORDER BY year(date)
+	INSUFFICENT
+
+Input:
+	year(date)
+	country
+	state
+	city
+	street
+	building
+	room
+	bed
+	person
+	age
+	gender
+	race
+	ethnicity
+
+Output:
+	SQL statement:
+	SELECT count(*) as count, year(date) as year
+	FROM homeless_population
+	WHERE year(date) = ?
+	AND country = ?
+	AND state = ?
+	AND city = ?
+	AND street = ?
+	AND building = ?
+	AND room = ?
+	AND bed = ?
+	AND person = ?
+	AND age = ?
+	AND gender = ?
+	AND race = ?
+	AND ethnicity = ?
+	GROUP BY year(date)
+	ORDER BY year(date)
+	INSUFFICENT
+
+Input:
+	year(date)
+	country
+	state
+	city
+	street
+	building
+	room
+	bed
+	person
+	age
+	gender
+	race
+	ethnicity
+	religion
+
+Output:
+	SQL statement:
+	SELECT count(*) as count, year(date) as year
+	FROM homeless_population
+	WHERE year(date) = ?
+	AND country = ?
+	AND state = ?
+	AND city = ?
+	AND street = ?
+	AND building = ?
+	AND room = ?
+	AND bed = ?
+	AND person = ?
+	AND age = ?
+	AND gender = ?
+	AND race = ?
+	AND ethnicity = ?
+	AND religion = ?
+	GROUP BY year(date)
+	ORDER BY year(date)
+	INSUFFICENT
+
+Input:
+	year(date)
+	country
+	state
+	city
+	street
+	building
+	room
+	bed
+	person
+	age
+	gender
+	race
+	ethnicity
+	religion
+	income
+
+Output:
+	SQL statement:
+	SELECT count(*) as count, year(date) as year
+	FROM homeless_population
+	WHERE year(date) = ?
+	AND country = ?
+	AND state = ?
+	AND city = ?
+	AND street = ?
+	AND building = ?
+	AND room = ?
+	AND bed = ?
+	AND person = ?
+	AND age = ?
+	AND gender = ?
+	AND race = ?
+
+====================================================================================================
+
+PROMPT 4:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita for each county of California.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 4:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita for each county of California.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM homeless WHERE county='San Francisco'
+
+Expected Response:
+	San Francisco: 1
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+	INSUFFICENT
+
+Expected Error:
+
+====================================================================================================
+
+PROMPT 5:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita and US shooting incidents per million capita for each county of California.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 5:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get homeless population per capita and US shooting incidents per million capita for each county of California.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+The following is a sample of the expected output.
+
+```
+
+```
+
+## Running the test suite
+
+1. Run `go test` in the project root.
+2. Run `go test -v` in the project root.
+3. Run `go test -cover` in the project root.
+4. Run `go test -cover -covermode=atomic` in the project root.
+5. Run `go test -cover -covermode=atomic -coverprofile=coverage.out` in the project root.
+6. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v` in the project root.
+7. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race` in the project root.
+8. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=5m` in the project root.
+9. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=5m -timeout=1s` in the project root.
+10. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1s -timeout=1m` in the project root.
+11. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1m -timeout=1s` in the project root.
+12. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1s -timeout=1m -timeout=1h` in the project root.
+13. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1h -timeout=1d` in the project root.
+14. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1d -timeout=1w` in the project root.
+15. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1w -timeout=1m` in the project root.
+16. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1m -timeout=1d` in the project root.
+17. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1d -timeout=1w` in the project root.
+18. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1w -timeout=1m` in the project root.
+19. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1m -timeout=1d` in the project root.
+20. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1d -timeout=1w` in the project root.
+21. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1w -timeout=1m` in the project root.
+22. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1m -timeout=1d` in the project root.
+23. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1d -timeout=1w` in the project root.
+24. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1w -timeout=1m` in the project root.
+25. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1m -timeout=1d` in the project root.
+26. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1d -timeout=1w` in the project root.
+27. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1w -timeout=1m` in the project root.
+28. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1m -timeout=1d` in the project root.
+29. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1d -timeout=1w` in the project root.
+30. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1w -timeout=1m` in the project root.
+31. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1m -timeout=1d` in the project root.
+32. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1d -timeout=1w` in the project root.
+33. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1w -timeout=1m` in the project root.
+34. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1m -timeout=1d` in the project root.
+35. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1d -timeout=1w` in the project root.
+36. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1w -timeout=1m` in the project root.
+37. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1m -timeout=1d` in the project root.
+38. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1d -timeout=1w` in the project root.
+39. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1w -timeout=1m` in the project root.
+40. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1m -timeout=1d` in the project root.
+41. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1d -timeout=1w` in the project root.
+42. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1w -timeout=1m` in the project root.
+43. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1m -timeout=1d` in the project root.
+44. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1d -timeout=1w` in the project root.
+45. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1w -timeout=1m` in the project root.
+46. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1m -timeout=1d` in the project root.
+47. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1d -timeout=1w` in the project root.
+48. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1w -timeout=1m` in the project root.
+49. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1m -timeout=1d` in the project root.
+50. Run `go test -cover -covermode=atomic -coverprofile=coverage.out -v -race -timeout=1d -timeout=1w` in the project
+
+====================================================================================================
+
+PROMPT 6:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get shooting incidents per million capita, and income per million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 6:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get shooting incidents per million capita, and income per million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT county, shooting_incidents, income
+	FROM county_shooting_incidents
+	WHERE county = 'San_Francisco'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income = 'INSUFFICENT'
+	AND shooting_incidents = 'INSUFFICENT'
+	AND income
+
+====================================================================================================
+
+PROMPT 7:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita, and income per million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 7:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita, and income per million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT state, count(*) as incidents, avg(income) as income
+	FROM shooting
+	GROUP BY state
+	ORDER BY incidents DESC
+	LIMIT 10
+
+Output:
+	state, incidents, income
+	Alabama,  1,  $1,000,000
+	Alaska,  1,  $1,000,000
+	Arizona,  1,  $1,000,000
+	Arkansas,  1,  $1,000,000
+	California,  1,  $1,000,000
+	Colorado,  1,  $1,000,000
+	Connecticut,  1,  $1,000,000
+	Delaware,  1,  $1,000,000
+	Florida,  1,  $1,000,000
+	Georgia,  1,  $1,000,000
+	Hawaii,  1,  $1,000,000
+	Idaho,  1,  $1,000,000
+	Illinois,  1,  $1,000,000
+	Indiana,  1,  $1,000,000
+	Iowa,  1,  $1,000,000
+	Kansas,  1,  $1,000,000
+	Kentucky,  1,  $1,000,000
+	Louisiana,  1,  $1,000,000
+	Maine,  1,  $1,000,000
+	Maryland,  1,  $1,000,000
+	Massachusetts,  1,  $1,000,000
+	Michigan,  1,  $1,000,000
+	Minnesota,  1,  $1,000,000
+	Mississippi,  1,  $1,000,000
+	Missouri,  1,  $1,000,000
+	Montana,  1,  $1,000,000
+	Nebraska,  1,  $1,000,000
+	Nevada,  1,  $1,000,000
+	New Hampshire,  1,  $1,000,000
+	New Jersey,  1,  $1,000,000
+	New Mexico,  1,  $1,000,000
+	New York,  1,  $1,000,000
+	North Carolina,  1,  $1,000,000
+	North Dakota,  1,  $1,000,000
+	Ohio,  1,  $1,000,000
+	Oklahoma,  1,  $1,000,000
+	Oregon,  1,  $1,000,000
+	Pennsylvania,  1,  $1,000,000
+	Rhode Island,  1,  $1,000,000
+	South Carolina,  1,  $1,000,000
+	South Dakota,  1,  $1,000,000
+	Tennessee,  1,  $1,000,000
+	Texas,  1,  $1,000,000
+	Utah,  1,  $1,000,000
+	Vermont,  1,  $1,000,000
+	Virginia,  1,  $1,000,000
+	Washington,  1,  $1,000,000
+	West Virginia,  1,  $1,000,000
+	Wisconsin,  1,  $1,000,000
+	Wyoming,  1,  $1,000,000
+	Alabama,  1,  $1,000,000
+	Alaska,  1,  $1,000,000
+	Arizona,  1,  $1,000,000
+	Arkansas,  1,  $1,000,000
+	California,  1,  $1,000,000
+	Colorado,  1,  $1,000,000
+	Connecticut,  1,  $1,000,000
+	Delaware,  1,  $1,000,000
+	Florida,  1,  $1,000,000
+	Georgia,  1,  $1,000,000
+	Hawaii,  1,  $1,000,000
+	Idaho,  1,  $1,000,000
+	Illinois,  1,  $1,000,000
+	Indiana,  1,  $1,000,000
+	Iowa,  1,  $1,000,000
+	Kansas,  1,  $1,000,000
+	Kentucky,  1,  $1,000,000
+	Louisiana,  1,  $1,000,000
+	Maine,  1,  $1,000,000
+	Maryland,  1,  $1,000,000
+	Massachusetts,  1,  $1,000,000
+	Michigan,  1,  $1,000,000
+	Minnesota,  1,  $1,000,000
+	Mississippi,  1,  $1,000,000
+	Missouri,  1,  $1,000,000
+	Montana,  1,  $1,000,000
+	Nebraska,  1,  $1,000,000
+	Nevada,  1,  $1,000,000
+	New Hampshire,  1,  $1,000,000
+	New Jersey,  1,  $1,000,000
+	New Mexico,  1,  $1,000,000
+	New York,  1,  $1,000,000
+	North Carolina,  1,  $1,000,000
+	North Dakota,  1,  $1,000,000
+	Ohio,  1,  $1,000,000
+	Oklahoma,  1,  $1,000,000
+	Oregon,  1,  $1,000,000
+	Pennsylvania,  1,  $1,000,000
+	Rhode Island,  1,  $1,000,000
+	South Carolina,  1,  $1,000,000
+	South Dakota,  1,  $1,000,000
+	Tennessee,  1,  $1,000,000
+	Texas,  1,  $1,000,000
+	Utah,  1,  $1,000,000
+	Vermont,  1,  $1,000,000
+	Virginia,  1,  $1,000,000
+	Washington,  1,  $1,000,000
+	West Virginia,  1,  $1,000,000
+	Wisconsin,  1,  $1,000,000
+	Wyoming,  1,  $1,000,000
+	Alabama,  1,  $1,000,000
+	Alaska,  1,  $1,000,000
+	Arizona,  1,  $1,000,000
+	Arkansas,  1,  $1,000,000
+	California,  1,  $1,000,000
+	Colorado,  1,  $1,000,000
+	Connecticut,  1,  $1,000,000
+	Delaware,  1,  $1,000,000
+	Florida,  1,  $1,000,000
+	Georgia,  1,  $1,000,000
+	Hawaii,  1,  $1,000,000
+	Idaho,  1,  $1,000,000
+	Illinois,  1,  $1,000,000
+	Indiana,  1,  $1,000,000
+	Iowa,  1,  $1,000,000
+	Kansas,  1,  $1,000,000
+	Kentucky,  1,  $1,000,000
+	Louisiana,  1,  $1,000,000
+	Maine,  1,  $1,000,000
+	Maryland,  1,  $1,000,000
+	Massachusetts,  1,  $1,000,000
+	Michigan,  1,  $1,000,000
+	Minnesota,  1,  $1,000,000
+	Mississippi,  1,  $1,000,000
+	Missouri,  1,  $1,000,000
+	Montana,  1,  $1,000,000
+	Nebraska,  1,  $1,000,000
+	Nevada,  1,  $1,000,000
+	New Hampshire,  1
+
+====================================================================================================
+
+PROMPT 8:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of suspects arrested each month over the years.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 8:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of suspects arrested each month over the years.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01/01/2000' AND '01/01/2001'
+
+Response:
+	INSUFFICIENT
+
+Response:
+	SELECT COUNT(*) FROM suspects WHERE arrested_date BETWEEN '01
+
+====================================================================================================
+
+PROMPT 9:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of victims injured, suspects arrested and suspects killed for each incident.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 9:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	Get count of victims injured, suspects arrested and suspects killed for each incident.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) FROM Incident WHERE Victim.Name = 'John Smith'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested' AND Suspect.Status = 'Killed'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed'
+	SELECT COUNT(*) FROM Incident WHERE Suspect.Name = 'John Smith' AND Suspect.Status = 'Arrested' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.Status = 'Killed' AND Suspect.
+
+====================================================================================================
+
+PROMPT 10:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each month, get count of victims killed and average of victims killed in each shooting incident.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 10:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each month, get count of victims killed and average of victims killed in each shooting incident.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT COUNT(*) AS num_victims, AVG(num_victims) AS avg_victims_per_incident
+	FROM (
+		SELECT COUNT(*) AS num_victims, MONTH(incident_date) AS month
+		FROM shooting_incidents
+		GROUP BY month
+	) AS months
+	GROUP BY month
+	ORDER BY month
+
+Response:
+	INSUFFICENT
+
+Expected Response:
+	+---------+------------+
+	| num_victims | avg_victims_per_incident |
+	+---------+------------+
+	|       0 |            0 |
+	+---------+------------+
+
+## 2.1.2.1.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.
+
+====================================================================================================
+
+PROMPT 11:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get victims killed per million capita, victims injured per million capita, suspects arrested per million capita, and incident counts for million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 11:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each county, get victims killed per million capita, victims injured per million capita, suspects arrested per million capita, and incident counts for million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT county, victims_killed, suspects_arrested, incident_count FROM table_name WHERE county = 'county_name'
+
+Response:
+	INSUFFICENT
+
+Expected Response:
+	county_name, victims_killed, suspects_arrested, incident_count
+
+Note:
+	The response should be a single SQL statement.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should be a single value.
+	The response should be a single row.
+	The response should be a single column.
+	The response should
+
+====================================================================================================
+
+PROMPT 12:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 12:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get shooting incidents per million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT state, count(*) / 1000000 as incidents_per_million
+	FROM shooting_incidents
+	GROUP BY state
+	ORDER BY incidents_per_million DESC
+	LIMIT 1
+
+Expected Response:
+	'INSUFFICENT'
+
+Expected Error:
+	'INSUFFICENT'
+
+Expected Data:
+	state, incidents_per_million
+	'ALABAMA', '0.0'
+	'ALASKA', '0.0'
+	'ARIZONA', '0.0'
+	'ARKANSAS', '0.0'
+	'CALIFORNIA', '0.0'
+	'COLORADO', '0.0'
+	'CONNECTICUT', '0.0'
+	'DELAWARE', '0.0'
+	'FLORIDA', '0.0'
+	'GEORGIA', '0.0'
+	'HAWAII', '0.0'
+	'IDAHO', '0.0'
+	'ILLINOIS', '0.0'
+	'INDIANA', '0.0'
+	'IOWA', '0.0'
+	'KANSAS', '0.0'
+	'KENTUCKY', '0.0'
+	'LOUISIANA', '0.0'
+	'MAINE', '0.0'
+	'MARYLAND', '0.0'
+	'MASSACHUSETTS', '0.0'
+	'MICHIGAN', '0.0'
+	'MINNESOTA', '0.0'
+	'MISSISSIPPI', '0.0'
+	'MISSOURI', '0.0'
+	'MONTANA', '0.0'
+	'NEBRASKA', '0.0'
+	'NEVADA', '0.0'
+	'NEW HAMPSHIRE', '0.0'
+	'NEW JERSEY', '0.0'
+	'NEW MEXICO', '0.0'
+	'NEW YORK', '0.0'
+	'NORTH CAROLINA', '0.0'
+	'NORTH DAKOTA', '0.0'
+	'OHIO', '0.0'
+	'OKLAHOMA', '0.0'
+	'OREGON', '0.0'
+	'PENNSYLVANIA', '0.0'
+	'RHODE ISLAND', '0.0'
+	'SOUTH CAROLINA', '0.0'
+	'SOUTH DAKOTA', '0.0'
+	'TENNESSEE', '0.0'
+	'TEXAS', '0.0'
+	'UTAH', '0.0'
+	'VERMONT', '0.0'
+	'VIRGINIA', '0.0'
+	'WASHINGTON', '0.0'
+	'WEST VIRGINIA', '0.0'
+	'WISCONSIN', '0.0'
+	'WYOMING', '0.0'
+	'TOTAL', '0.0'
+
+Expected End:
+	'INSUFFICENT'
+
+Expected Error:
+	'INSUFFICENT'
+
+Expected Data:
+	state, incidents_per_million
+	'ALABAMA', '0.0'
+	'ALASKA', '0.0'
+	'ARIZONA', '0.0'
+	'ARKANSAS', '0.0'
+	'CALIFORNIA', '0.0'
+	'COLORADO', '0.0'
+	'CONNECTICUT', '0.0'
+	'DELAWARE', '0.0'
+	'FLORIDA', '0.0'
+	'GEORGIA', '0.0'
+	'HAWAII', '0.0'
+	'IDAHO', '0.0'
+	'ILLINOIS', '0.0'
+	'INDIANA', '0.0'
+	'IOWA', '0.0'
+	'KANSAS', '0.0'
+	'KENTUCKY', '0.0'
+	'LOUISIANA', '0.0'
+	'MAINE', '0.0'
+	'MARYLAND', '0.0'
+	'MASSACHUSETTS', '0.0'
+	'MICHIGAN', '0.0'
+	'MINNESOTA', '0.0'
+	'MISSISSIPPI', '0.0'
+	'MISSOURI', '0.0'
+	'MONTANA', '0.0'
+	'NEBRASKA', '0.0'
+	'NEVADA', '0.0'
+	'NEW HAMPSHIRE', '0.0'
+	'NEW JERSEY', '0.0'
+	'NEW MEXICO', '0.0'
+	'NEW YORK', '0.0'
+	'NORTH CAROLINA', '0.0'
+	'NORTH DAKOTA', '0.0'
+	'OHIO', '0.0'
+	'OKLAHOMA', '0.0'
+	'OREGON', '0.0'
+	'PENNSYLVANIA', '0.0'
+	'RHODE ISLAND', '0.0'
+	'SOUTH CAROLINA', '0.0'
+	'SOUTH DAKOTA', '0.0'
+	'TENNESSEE', '0.0'
+	'TEXAS', '0.0'
+	'UTAH', '0.0'
+	'VERMONT', '0.0'
+	'VIRGINIA', '0.0'
+	'WASHINGTON', '0.0'
+	'WEST VIRGINIA', '0.0'
+	'WISCONSIN', '0.0'
+	'WYOMING', '0.0'
+	'TOTAL', '0.0'
+
+Expected End:
+	'INSUFFICENT'
+
+Expected Error:
+	'INSUFFICENT'
+
+Expected Data:
+	state, incidents_per_million
+	'ALABAMA', '0.0'
+	'ALASKA', '0.0'
+	'ARIZONA', '0.0'
+	'ARKANSAS', '0.0'
+	'CALIFORNIA', '0.0'
+	'COLORADO', '0.0'
+	'CONNECTICUT', '0.0'
+	'DELAWARE', '0.0'
+	'FLORIDA', '0.0'
+	'GEORGIA', '0.0'
+	'HAWAII', '0.0'
+	'IDAHO', '0.0'
+	'ILLINOIS', '0.0'
+	'INDIANA', '0.0'
+	'IOWA', '0.0'
+	'KANSAS', '0.0'
+	'KENTUCKY', '0.0'
+	'LOUISIANA', '0.0'
+	'MAINE', '0.0'
+	'MARYLAND', '0.0'
+	'MASSACHUSETTS', '0.0'
+	'MICHIGAN', '0.0'
+	'MINNESOTA', '0.0'
+	'MISSISSIPPI', '0.0'
+	'MISSOURI', '0.0'
+	'MONTANA', '0.0'
+	'NEBRASKA', '0.0'
+	'NEVADA', '0.0'
+	'NEW HAMPSHIRE', '0.0'
+	'NEW JERSEY', '0.0'
+	'NEW MEXICO', '0.0'
+	'NEW YORK', '0.0'
+	'NORTH CAROLINA', '0.0'
+	'NORTH DAKOTA', '0.0'
+	'OHIO', '0.0'
+	'OKLAHOMA', '0.0'
+	'OREGON', '0.0'
+	'PENNSYLVANIA', '0.0'
+	'RHODE ISLAND', '0.0'
+	'SOUTH CAROLINA', '0.0'
+	'SOUTH DAKOTA
+
+====================================================================================================
+
+PROMPT 13:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get victims killed per million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+RESPONSE 13:
+
+Generate an SQL statement to answer a question.
+
+Prompt: 
+	For each state, get victims killed per million capita.
+
+Note, only respond with a single most accurate SQL statement.
+If more information is required, simply respond with 'INSUFFICENT'.
+
+Example:
+	SELECT state, count(*) / 1000000 FROM victims GROUP BY state;
+
+Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected Response:
+	INSUFFICENT
+
+Expected
+
+====================================================================================================
+
