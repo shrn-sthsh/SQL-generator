@@ -25,6 +25,9 @@ def list_subdirectories(root_dir):
 
     return subdirectories
 
+
+print(f"PROCESS: Generating pyrightconfig.json under Conda environment: {conda_env_path}", end="")
+
 subdirectories = list_subdirectories('.')
 
 # config JSON
@@ -57,4 +60,4 @@ with open(file_name, 'w') as file:
         os.unlink(link_path)
     os.symlink(file_path, link_path)
 
-print(f"Generated pyrightconfig.json with Conda environment: {conda_env_path}")
+print(f"done", end="")
