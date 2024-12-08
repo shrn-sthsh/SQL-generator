@@ -26,7 +26,11 @@ def list_subdirectories(root_dir):
     return subdirectories
 
 
-print(f"PROCESS: Generating pyrightconfig.json under Conda environment: {conda_env_path}", end="")
+conda_env_name: str = conda_env_path.split('/')[-1]
+print(
+    f"PROCESS: Generating pyrightconfig.json under Conda environment: {conda_env_name}", 
+    end=""
+)
 
 subdirectories = list_subdirectories('.')
 

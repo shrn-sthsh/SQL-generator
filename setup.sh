@@ -77,9 +77,15 @@ if [ ! -f "$LOCAL_ENV_CONFIG" ]; then
 fi
 
 
+# Source the .envrc file if it exists
+iecho -n "PROCESS: Sourcing $LOCAL_ENV_CONFIG... "
+source "$LOCAL_ENV_CONFIG"
+iecho -e "done\n"
+
 # Add required channels
-conda config --add channels conda-forge
+conda config --add channels pytorch
 conda config --add channels nvidia
+conda config --add channels conda-forge
 conda config --set channel_priority strict
 
 # Make or update enviroment
@@ -92,7 +98,7 @@ fi
 # Enviroment exists
 if conda env list | grep -q "$CONDA_ENV_NAME"; then
   iecho "PROCESS: Updating conda environment '$CONDA_ENV_NAME' for NORP project"
-  conda env update --file "$CONDA_ENV_CONFIG" --prune
+  conda env update --file "$CONDA_ENV_CONFIG" --prune &> /dev/null
   if [[ $? -ne 0 ]]; then
     iecho "ERROR: Failed to update conda environment '$CONDA_ENV_NAME'."
     exit 1
@@ -101,34 +107,24 @@ if conda env list | grep -q "$CONDA_ENV_NAME"; then
 # Enviroment doesn't exist
 else
   iecho "PROCESS: Creating conda environment '$CONDA_ENV_NAME' for NORP project"
-  conda env create --file "$CONDA_ENV_CONFIG"
+  conda env create --file "$CONDA_ENV_CONFIG" &> /dev/null
   if [[ $? -ne 0 ]]; then
     iecho "ERROR: Failed to create conda environment '$CONDA_ENV_NAME'."
     exit 1
   fi
 fi
 
-conda config --add channels conda-forge
-conda config --add channels nvidia
-conda config --set channel_priority strict
-
 # Activate enviroment
-iecho -n "STATUS: Activating environment: $CONDA_ENV_NAME... "
-source "$(conda info --base)/etc/profile.d/conda.sh"
-conda activate "$CONDA_ENV_NAME"
+iecho -n "STATUS:  Activating environment: $CONDA_ENV_NAME... "
+conda activate "$CONDA_ENV_NAME" &> /dev/null
 iecho "done"
 
 # Run setup.py to set up python project
-iecho -n "STATUS: Running $PYPROJECT_CONFIG... "
-python3 "$PYPROJECT_CONFIG" install
+iecho -n "STATUS:  Running $PYPROJECT_CONFIG... "
+python3 "$PYPROJECT_CONFIG" install &> /dev/null
 iecho "done"
 
-# Source the .envrc file if it exists
-iecho -n "Sourcing $LOCAL_ENV_CONFIG... "
-source "$LOCAL_ENV_CONFIG"
-iecho "done"
-
-iecho -e "STATUS: Done. Environment '$CONDA_ENV_NAME' is ready.\n"
+iecho -e "STATUS:  Done. Environment '$CONDA_ENV_NAME' is ready.\n"
 
 
 # Set up pyright LSP config

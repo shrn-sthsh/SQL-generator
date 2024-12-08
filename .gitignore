@@ -1,5 +1,14 @@
 # cache
 *__pycache__*
 
+# build folder
+build
+
+# distribtion folder
+dist
+
+# metadata
+sqlgen.egg-info
+
 # LSP config
 *pyrightconfig.json
